@@ -9,31 +9,61 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour {
 
-    new Rigidbody rigidbody;
-    new Camera camera;
+    Camera cam;
+    Rigidbody rb;
 
     int jumps = 1;
-    [SerializeField] float speed = 3, jumpForce = 500;
+    [SerializeField] bool usaJoystick;
+    [SerializeField] float speed = 3;
+    [SerializeField] float jumpForce = 500;
 
-    void Start() {
-        camera = GetComponentInChildren<Camera>();
-        rigidbody = GetComponent<Rigidbody>();
+
+
+    private void Awake()
+    {
+        cam = GetComponentInChildren<Camera>();
+        rb = GetComponent<Rigidbody>();
     }
 
-    
-    void Update() {
+    void Start()
+    {
+#if UNITY_EDITOR
+        //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
+        if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
+        else usaJoystick = false;
+#endif
+    }
 
-        Vector3 velocity = camera.transform.forward * Input.GetAxis("Vertical") * speed;
-        transform.position += velocity * Time.deltaTime;
 
-        if (Input.GetButtonDown("Jump")) {
-            Jump();
+    void Update() 
+    {
+        Caminar();
+        if (Input.GetButtonDown("Jump")) Jump();
+    }
+
+
+
+
+    void Caminar()
+    {
+        Vector3 velocity;
+        if(!usaJoystick)
+        {
+            velocity = cam.transform.forward * Input.GetAxis("Vertical") * speed;
         }
+        else
+        {
+            velocity = cam.transform.forward * Input.GetAxis("Horizontal") * -speed;
+        }
+        Vector3 newPosition = transform.position + velocity * Time.deltaTime;
+        rb.MovePosition(newPosition);
     }
 
-    public void Jump() {
-        if(jumps >= 1) {
-            rigidbody.AddForce(Vector3.up * jumpForce);
+    public void Jump()
+    {
+        if (jumps >= 1)
+        {
+            rb.AddForce(Vector3.up * jumpForce);
             jumps--;
         }
     }
