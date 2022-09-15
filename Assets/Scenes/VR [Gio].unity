@@ -658,6 +658,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 387957228043289189, guid: 43612955934c5984bbfa8dd702e672cd, type: 3}
+      propertyPath: speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 387957228043289189, guid: 43612955934c5984bbfa8dd702e672cd, type: 3}
       propertyPath: usaJoystick
       value: 1
       objectReference: {fileID: 0}

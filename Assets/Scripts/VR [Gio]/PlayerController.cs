@@ -7,7 +7,8 @@ using UnityEngine;
 // Author (Discord): Gio#0753
 //-----------------------------------------------------------------------
 
-public class BasicMovement : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     Camera cam;
     Rigidbody rb;
@@ -15,7 +16,6 @@ public class BasicMovement : MonoBehaviour {
     int jumps = 1;
     [SerializeField] bool usaJoystick;
     [SerializeField] float speed = 3;
-    [SerializeField] float jumpForce = 500;
 
 
 
@@ -26,7 +26,7 @@ public class BasicMovement : MonoBehaviour {
     }
 
     void Start()
-    {
+    {  
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
@@ -35,10 +35,9 @@ public class BasicMovement : MonoBehaviour {
     }
 
 
-    void Update() 
+    void FixedUpdate()
     {
         Caminar();
-        if (Input.GetButtonDown("Jump")) Jump();
     }
 
 
@@ -46,29 +45,21 @@ public class BasicMovement : MonoBehaviour {
 
     void Caminar()
     {
-        Vector3 velocity;
-        if(!usaJoystick)
+        Vector3 movement;
+        float hAxis = Input.GetAxis("Horizontal");
+        float vAxis = Input.GetAxis("Vertical");
+
+        if (!usaJoystick)
         {
-            velocity = cam.transform.forward * Input.GetAxis("Vertical") * speed;
+            movement = (cam.transform.right * hAxis * (speed/4)) + (cam.transform.forward * vAxis * speed);
         }
         else
         {
-            velocity = cam.transform.forward * Input.GetAxis("Horizontal") * -speed;
+            movement = (cam.transform.right * vAxis * (speed/4)) + (cam.transform.forward * hAxis * -speed);
         }
-        Vector3 newPosition = transform.position + velocity * Time.deltaTime;
-        rb.MovePosition(newPosition);
+        movement = Vector3.ClampMagnitude(movement, speed - Mathf.Abs(movement.x * 2));
+        rb.MovePosition(transform.position + movement * Time.deltaTime);
+        Debug.Log(movement.magnitude);
     }
 
-    public void Jump()
-    {
-        if (jumps >= 1)
-        {
-            rb.AddForce(Vector3.up * jumpForce);
-            jumps--;
-        }
-    }
-
-    void OnCollisionEnter(Collision collision) {
-        jumps = 1;
-    }
 }
