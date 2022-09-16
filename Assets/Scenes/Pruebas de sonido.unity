@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 190829741}
   - component: {fileID: 190829740}
   - component: {fileID: 190829739}
+  - component: {fileID: 190829744}
   m_Layer: 0
   m_Name: Fuente Rojo
   m_TagString: Untagged
@@ -683,7 +684,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190829738}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -753,6 +754,19 @@ Transform:
   m_Father: {fileID: 1043997663}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &190829744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190829738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da336d7a3651594aae548dccce8fb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElSonido: {fileID: 8300000, guid: 69f2c24683113fa47bd44a9bf722fef4, type: 3}
 --- !u!1 &513153176
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,6 +1106,7 @@ GameObject:
   - component: {fileID: 788560037}
   - component: {fileID: 788560036}
   - component: {fileID: 788560035}
+  - component: {fileID: 788560040}
   m_Layer: 0
   m_Name: Fuente Azul
   m_TagString: Untagged
@@ -1121,7 +1136,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.1
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -1273,6 +1288,19 @@ Transform:
   m_Father: {fileID: 1043997663}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &788560040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 788560034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da336d7a3651594aae548dccce8fb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
 --- !u!1 &839315198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2737,6 +2765,29 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1650259211}
   m_CullTransparentMesh: 1
+--- !u!1 &1673235002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3673601805275144380, guid: 43612955934c5984bbfa8dd702e672cd, type: 3}
+  m_PrefabInstance: {fileID: 1033811250}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1673235005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1673235002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04d909962b1795941970e782b1b3458a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camara: {fileID: 0}
+  productoSeleccionado: {fileID: 0}
+  distMinPlayerProducto: 0
+  distMaxPlayerProducto: 0
+  canGrab: 0
+  producto: {fileID: 0}
 --- !u!1 &1683467428
 GameObject:
   m_ObjectHideFlags: 0

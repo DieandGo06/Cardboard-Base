@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class PlayerActions : MonoBehaviour
 {
@@ -50,6 +51,8 @@ public class PlayerActions : MonoBehaviour
             productoSeleccionado = other.gameObject;
             AgarrarProducto(other.gameObject);
         }
+
+        other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
     }
     
 
