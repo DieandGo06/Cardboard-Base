@@ -49,14 +49,39 @@ public class PlayerController : MonoBehaviour
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
-        if (!usaJoystick)
-        {
-            movement = (cam.transform.right * hAxis * (speed/4)) + (cam.transform.forward * vAxis * speed);
-        }
-        else
-        {
-            movement = (cam.transform.right * vAxis * (speed/4)) + (cam.transform.forward * hAxis * -speed);
-        }
+        movement = cam.transform.forward * vAxis * speed;
+
+        //if (!usaJoystick)
+        //{
+        //    movement = (cam.transform.right * hAxis * (speed/4)) + (cam.transform.forward * vAxis * speed);
+        //}
+        //else
+        //{
+        //    Vector3 camRotation = cam.transform.rotation.eulerAngles;
+
+
+        //    if (camRotation.y > 330 && camRotation.y <= 360 || camRotation.y > 0 && camRotation.y <= 30)
+        //    {
+        //        movement = cam.transform.forward * vAxis * speed;
+        //    }
+        //    else movement = Vector3.zero;
+
+
+
+
+
+        //    //movement = cam.transform.forward * Input.GetAxis("Vertical") * speed;
+        //    /*
+        //    float xRotation = cam.transform.rotation.w;
+        //    if (xRotation < 0)
+        //    {
+        //        movement = (cam.transform.right * vAxis * (speed / 4)) + (cam.transform.forward * hAxis * -speed);
+        //    }
+        //    else movement = (cam.transform.right * vAxis * (speed / 4)) + (cam.transform.forward * hAxis * speed);
+        //    */
+        //}
+
+
         movement = Vector3.ClampMagnitude(movement, speed - Mathf.Abs(movement.x * 2));
         rb.MovePosition(transform.position + movement * Time.deltaTime);
         Debug.Log(movement.magnitude);
