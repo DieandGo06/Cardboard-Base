@@ -10,22 +10,18 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    public GameObject cam;
-    public Transform googleTracked;
-
-
+    Camera cam;
     Rigidbody rb;
 
     int jumps = 1;
     [SerializeField] bool usaJoystick;
     [SerializeField] float speed = 3;
-    public Vector3 movement;
 
 
 
     private void Awake()
     {
-        //cam = GetComponentInChildren<Camera>();
+        cam = GetComponentInChildren<Camera>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -49,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
     void Caminar()
     {
+        Vector3 movement;
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
