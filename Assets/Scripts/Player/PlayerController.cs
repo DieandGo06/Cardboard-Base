@@ -7,10 +7,20 @@ using System;
 public class PlayerController : MonoBehaviour
 {
     //Variables en editor
+    [Header("Referencias")]
     public GameObject cam;
     public Transform googleTracked;
+
+    [Header("Variables setteables")]
+    [SerializeField] float distanciaObjetoAgarrado;
+    [SerializeField] float distMaxPlayerProducto;
+    public float speed = 3;
+
+
+    [Header("Variables p/ debug")]
+    public GameObject productoSeleccionado;
     [SerializeField] bool usaJoystick;
-    public float speed;
+    [SerializeField] bool canGrab;
 
     //Variables privadas
     Rigidbody rb;
@@ -35,13 +45,45 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-       // Debug.Log(inputEntrante("anyKey"));
+        //Debug.Log(inputEntrante("anyKey"));
+
+        if (Input.GetMouseButtonDown(0) || inputEntrante("anyKey") == "JoystickButton4")
+        {
+            if (productoSeleccionado == null)
+            {
+                if (productoSeleccionable() != null) AgarrarProducto(productoSeleccionable());
+            }
+            else SoltarProducto();
+        }
+        MostrarRaycast();
+
+
+        if (inputEntrante("anyKey") == "JoystickButton4")
+        {
+            Debug.Log("Funciona");
+        }
     }
 
 
     void FixedUpdate()
     {
         Caminar();
+    }
+
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.tag == "Producto")
+        {
+            productoSeleccionado = other.gameObject;
+            AgarrarProducto(other.gameObject);
+        }
+
+        if (GetComponent<AudioSource>() != null)
+        {
+            other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
+        }
+
     }
 
 
@@ -71,6 +113,8 @@ public class PlayerController : MonoBehaviour
     }
 
 
+
+
     string inputEntrante(string option)
     {
         if (option == "mouse")
@@ -92,4 +136,49 @@ public class PlayerController : MonoBehaviour
         return "no se ha usado el input buscado";
     }
 
+
+
+
+    #region Agarrar y soltar 
+    void SetAsChildOfCamera(GameObject producto)
+    {
+        producto.transform.parent = cam.transform;
+    }
+
+    void AgarrarProducto(GameObject producto)
+    {
+        SetAsChildOfCamera(producto);
+        producto.transform.localPosition = Vector3.zero;
+        Vector3 nuevaPosicion = Vector3.zero.CambiarZ(distanciaObjetoAgarrado);
+        producto.transform.localPosition = nuevaPosicion;
+        productoSeleccionado = producto;
+    }
+
+    GameObject productoSeleccionable()
+    {
+        RaycastHit hit;
+        Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, distMaxPlayerProducto);
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Producto")) return hit.collider.transform.gameObject;
+        }
+        return null;
+    }
+
+    void MostrarRaycast()
+    {
+        RaycastHit hit;
+        Physics.Raycast(cam.transform.position, cam.transform.TransformDirection(Vector3.forward), out hit, distMaxPlayerProducto);
+        Debug.DrawRay(cam.transform.position, cam.transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+    }
+
+    void SoltarProducto()
+    {
+        if (productoSeleccionado.GetComponent<PosicionarProducto>())
+        {
+            productoSeleccionado.GetComponent<PosicionarProducto>().SetNewPosition();
+            productoSeleccionado = null;
+        }
+    }
+    #endregion
 }
