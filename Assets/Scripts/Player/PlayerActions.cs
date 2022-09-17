@@ -18,7 +18,7 @@ public class PlayerActions : MonoBehaviour
 
     private void Awake()
     {
-        camara = GetComponentInChildren<Camera>().gameObject;
+        //camara = GetComponentInChildren<Camera>().gameObject;
     }
 
     private void Start()
