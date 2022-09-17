@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField, Range(1, 10)] public float speed;
     [SerializeField] bool usaJoystick;
+    public GameObject cam;
 
     private void Awake()
     {
@@ -55,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //Con el jostick de VR Box hay que invertir los ejes
             x = -x;
-            move = transform.right * z + transform.forward * x;
+            move = cam.transform.right * z + cam.transform.forward * x;
         }
         controller.Move(move * speed * Time.deltaTime);
     }

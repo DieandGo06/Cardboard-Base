@@ -27,6 +27,8 @@ public class DebugRotation : MonoBehaviour
         if (showAngle)
         {
             var prueba = cam.transform.rotation.eulerAngles;
+            //var prueba = cam.transform.forward;
+
             //texto.text = cam.transform.rotation.ToString();
             texto.text = prueba.ToString();
 

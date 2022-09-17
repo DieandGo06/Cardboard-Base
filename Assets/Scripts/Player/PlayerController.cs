@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
     int jumps = 1;
     [SerializeField] bool usaJoystick;
     [SerializeField] float speed = 3;
+    public Vector3 movement;
 
 
 
@@ -45,7 +46,6 @@ public class PlayerController : MonoBehaviour
 
     void Caminar()
     {
-        Vector3 movement;
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
