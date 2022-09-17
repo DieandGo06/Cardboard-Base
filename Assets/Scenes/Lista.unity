@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2352517867016233906, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: speed
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2722319881024299272, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
       propertyPath: m_Name
       value: Player (Container)
@@ -328,7 +332,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  speed: 0
   caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &228107968
@@ -679,7 +682,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  speed: 0
   caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &851965484
@@ -1035,7 +1037,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  speed: 0
   caminante: {fileID: 988385120}
   nombreDeProducto: galletitas
 --- !u!65 &1276719607
@@ -1359,7 +1360,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  speed: 0
   caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &1636046988
@@ -1589,7 +1589,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  speed: 0
   caminante: {fileID: 988385120}
   nombreDeProducto: galletitas
 --- !u!65 &1965511072
