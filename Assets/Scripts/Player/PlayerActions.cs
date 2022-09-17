@@ -7,12 +7,11 @@ public class PlayerActions : MonoBehaviour
 {
     public GameObject camara;
     public GameObject productoSeleccionado;
-    [SerializeField] float distMinPlayerProducto;
+    [SerializeField] float distanciaObjetoAgarrado;
     [SerializeField] float distMaxPlayerProducto;
     [SerializeField] bool canGrab;
 
     [SerializeField] GameObject producto;
-
 
 
 
@@ -52,7 +51,11 @@ public class PlayerActions : MonoBehaviour
             AgarrarProducto(other.gameObject);
         }
 
-        other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
+        if (GetComponent<AudioSource>() != null)
+        {
+            other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
+        }
+
     }
     
 
@@ -66,7 +69,7 @@ public class PlayerActions : MonoBehaviour
     {
         SetAsChildOfCamera(producto);
         producto.transform.localPosition = Vector3.zero;
-        Vector3 nuevaPosicion = Vector3.zero.CambiarZ(distMinPlayerProducto);
+        Vector3 nuevaPosicion = Vector3.zero.CambiarZ(distanciaObjetoAgarrado);
         producto.transform.localPosition = nuevaPosicion;
         productoSeleccionado = producto;
     }
