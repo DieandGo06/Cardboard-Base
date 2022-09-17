@@ -7,8 +7,10 @@ public class DebugRotation : MonoBehaviour
 {
     TextMeshProUGUI texto;
     public GameObject cam;
-    public bool showAngle;
+    public GameObject player;
+    public bool showCamAngle;
     public bool showCamMoved;
+    public bool showPlayerAngle;
 
     Quaternion startRotation;
 
@@ -24,14 +26,18 @@ public class DebugRotation : MonoBehaviour
     void Update()
     {
         //Debug.Log(cam);
-        if (showAngle)
+        if (showCamAngle)
         {
-            var prueba = cam.transform.rotation.eulerAngles;
-            //var prueba = cam.transform.forward;
-
-            //texto.text = cam.transform.rotation.ToString();
+            var prueba = cam.transform.localRotation.eulerAngles;
             texto.text = prueba.ToString();
 
+            //var prueba = cam.transform.forward;
+            //texto.text = cam.transform.rotation.ToString();
+        }
+        if (showPlayerAngle)
+        {
+            var prueba2 = player.transform.rotation.eulerAngles;
+            texto.text = prueba2.ToString();
         }
         if (showCamMoved) 
         {

@@ -10,7 +10,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    Camera cam;
+    public GameObject cam;
+    public Transform googleTracked;
+
+
     Rigidbody rb;
 
     int jumps = 1;
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        cam = GetComponentInChildren<Camera>();
+        //cam = GetComponentInChildren<Camera>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -49,7 +52,36 @@ public class PlayerController : MonoBehaviour
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
-        movement = cam.transform.forward * vAxis * speed;
+        Vector3 googleTrackedDegrees = googleTracked.rotation.eulerAngles;
+        Vector3 playerDegrees = new Vector3(0, googleTrackedDegrees.y-180, 0);
+        Vector3 camDegrees = new Vector3(googleTrackedDegrees.x, googleTrackedDegrees.y, 0);
+
+        transform.rotation = Quaternion.Euler(playerDegrees);
+        cam.transform.rotation = Quaternion.Euler(camDegrees);
+        Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
+        rb.MovePosition(transform.position + move * Time.deltaTime);
+
+        Debug.Log(move);
+
+        //Vector3 move = cam.transform.right * vAxis + cam.transform.forward * hAxis;
+
+        //transform.Translate(move);
+
+
+
+
+
+        /*
+        Vector3 camRotation = cam.transform.localRotation.eulerAngles;
+        float camX = camRotation.x - 180;
+        Vector3 playerRotation = transform.rotation.eulerAngles;
+        float playerY = playerRotation.y - 180;
+        */
+
+
+
+
+        //movement = cam.transform.forward * vAxis * speed;
 
         //if (!usaJoystick)
         //{
@@ -81,10 +113,11 @@ public class PlayerController : MonoBehaviour
         //    */
         //}
 
-
+        /*
         movement = Vector3.ClampMagnitude(movement, speed - Mathf.Abs(movement.x * 2));
         rb.MovePosition(transform.position + movement * Time.deltaTime);
         Debug.Log(movement.magnitude);
+        */
     }
 
 }
