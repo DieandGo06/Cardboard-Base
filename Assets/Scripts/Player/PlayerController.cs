@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
 
     void Caminar()
     {
-        Vector3 movement;
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
 
