@@ -10,7 +10,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
 
-    Camera cam;
+    public GameObject cam;
+    public Transform googleTracked;
     Rigidbody rb;
 
     int jumps = 1;
@@ -21,7 +22,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        cam = GetComponentInChildren<Camera>();
         rb = GetComponent<Rigidbody>();
     }
 
