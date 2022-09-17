@@ -84,7 +84,6 @@ public class PlayerController : MonoBehaviour
 
         movement = Vector3.ClampMagnitude(movement, speed - Mathf.Abs(movement.x * 2));
         rb.MovePosition(transform.position + movement * Time.deltaTime);
-        Debug.Log(movement.magnitude);
     }
 
 }
