@@ -27,8 +27,6 @@ public class CameraMovement : MonoBehaviour
 
             //Aplica la rotacion en la camara
             transform.localRotation = Quaternion.Euler(rotacionX, 0f, 0f);
-            //Aplica la rotacion en el jugador
-            player.Rotate(Vector3.up * mouseInput.x);
         }
     }
 
