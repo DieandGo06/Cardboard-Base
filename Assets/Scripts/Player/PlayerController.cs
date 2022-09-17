@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public GameObject cam;
     public Transform googleTracked;
     [SerializeField] bool usaJoystick;
-    public float speed = 3;
+    public float speed;
 
     //Variables privadas
     Rigidbody rb;
@@ -35,7 +35,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(inputEntrante("anyKey"));
+       // Debug.Log(inputEntrante("anyKey"));
     }
 
 

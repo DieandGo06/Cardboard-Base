@@ -7,7 +7,8 @@ using UnityEngine.UI; //IMPORTANTE!!!!
 
 public class identificadorDeEfectos : MonoBehaviour
 {
-    //public bool esSaludable;
+    public bool esSaludable;
+    GameManager gm;
 
     //public bool seEjecutaUnaConstante;
 
@@ -20,24 +21,29 @@ public class identificadorDeEfectos : MonoBehaviour
     //bool apareciendoSucia;
     //bool apareciendoLimpia;
 
-    [SerializeField] float speed;
      bool seEjecutaUnaVez;
 
     //Para el caminante
     public Caminante caminante;
     public string nombreDeProducto;
     bool choca;
-    bool aumentar;
+    bool efecto;
 
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        gm = GameManager.instance;
+        choca = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(gm.jugador.GetComponent<PlayerController>().speed);
+
+
+
+
         //if (!seEjecutaUnaConstante) //PAREDES-------------------------------------------------------------------------
         //{
 
@@ -46,14 +52,14 @@ public class identificadorDeEfectos : MonoBehaviour
         //        if (apareciendoSucia == true)
         //        {
         //            //tiene que desaparecr el otro
-        //            GameManager.instance.paredes.transform.GetChild(1).gameObject.SetActive(false);
+        //            gm.paredes.transform.GetChild(1).gameObject.SetActive(false);
 
         //            AparecerParedSucia();
         //        }
         //        if (apareciendoLimpia == true)
         //        {
         //            //tiene que desaparecr el otro
-        //            GameManager.instance.paredes.transform.GetChild(0).gameObject.SetActive(false);
+        //            gm.paredes.transform.GetChild(0).gameObject.SetActive(false);
 
         //            //AparecerParedLimpia();
         //            AparecerParedLimpia();
@@ -71,21 +77,33 @@ public class identificadorDeEfectos : MonoBehaviour
         {
 
             if (choca) {
-                if (nombreDeProducto != null)
-                {
-                    aumentar = true;
-                }
+
 
                 if (nombreDeProducto == "bebida")
                 {
-                    GameManager.instance.contadorBebida--;
-                    Lista(GameManager.instance.contadorBebida);
+                    gm.contadorBebida--;
+                    Lista(gm.contadorBebida);
                 }
 
                 if (nombreDeProducto == "galletitas")
                 {
-                    GameManager.instance.contadorGalletitas--;
-                    Lista(GameManager.instance.contadorGalletitas);
+                    gm.contadorGalletitas--;
+                    Lista(gm.contadorGalletitas);
+
+
+                        if (!esSaludable)
+                        {
+                            RalentizarCarrito();
+                        }
+                        else if (esSaludable)
+                        {
+                        float speed = 40;
+                        gm.jugador.GetComponent<PlayerController>().speed = speed;
+
+                            //AcelerarCarrito();
+                            Debug.Log("esto esta andando");
+                        }
+
                 }
 
                 seEjecutaUnaVez = true;
@@ -127,17 +145,13 @@ public class identificadorDeEfectos : MonoBehaviour
 
         //}
 
-        //if (nombreDeProducto == "coquita")
-        //{
-        //    AcelerarCarrito();
-        //    Tareas.Nueva(5, RalentizarCarrito);
-        //}
+    
 
         //if (nombreDeProducto == "agua") //El agua mejora el estado de las paredes
         //{
         //    apareciendoLimpia = true;
 
-        //    GameManager.instance.paredes.transform.GetChild(2).gameObject.SetActive(true);
+        //    gm.paredes.transform.GetChild(2).gameObject.SetActive(true);
 
 
         //}
@@ -146,6 +160,7 @@ public class identificadorDeEfectos : MonoBehaviour
 
     }
 
+    //--------------- CODIGO DE LISTA------------------------------------
     private void OnTriggerEnter(Collider other)
     {
         ActivarCaminante();
@@ -157,19 +172,19 @@ public class identificadorDeEfectos : MonoBehaviour
         if (contador == 0)
         {
             caminante.seMueve = true;
+          
         }
 
-
-        Debug.Log(contador);
 
     }
     void ActivarCaminante() {
         choca = true;
     }
 
+    //------------------------------------------------------------------
 
     ////Blurr ------------------------------------------
-    //if (!veMal && GameManager.instance.playerInfo.blur < 20)
+    //if (!veMal && gm.playerInfo.blur < 20)
     //{
     //    tiempoTranscurrido += Time.deltaTime;
     //    MejorarVision();
@@ -183,36 +198,37 @@ public class identificadorDeEfectos : MonoBehaviour
 
     //void MejorarVision()
     //{
-    //    GameManager.instance.playerInfo.blur += Time.deltaTime * 0.5f;
-    //    float _blur = GameManager.instance.playerInfo.blur;
-    //    GameManager.instance.playerInfo.SetBlurValue(_blur);
+    //    gm.playerInfo.blur += Time.deltaTime * 0.5f;
+    //    float _blur = gm.playerInfo.blur;
+    //    gm.playerInfo.SetBlurValue(_blur);
     //    Debug.Log(_blur);
     //}
 
 
-    ////powerUp carrito ------------------------------------------
-    //void RalentizarCarrito()
-    //{
-    //    GameManager.instance.jugador.GetComponent<PlayerMovement>().speed = 2;
-    //}
+    //powerUp carrito ------------------------------------------
+    void RalentizarCarrito()
+    {
+        gm.jugador.GetComponent<PlayerController>().speed -= 3;
+    
+    }
 
-    //void AcelerarCarrito()
-    //{
-    //    GameManager.instance.jugador.GetComponent<PlayerMovement>().speed = 20;
-    //}
+    void AcelerarCarrito()
+    {
+        gm.jugador.GetComponent<PlayerController>().speed += 3;
+    }
 
     ////Luces -----------------------------------------------------------------------------------------
     //void GlitchOff() //ESTA ES LA PANTALLA EN NEGRO------------------------------------------------
     //{
 
     //    float alpha = Random.Range(0.85f, 0.95f);
-    //    GameManager.instance.corteDeLuz.GetComponent<RawImage>().color = new Color(0, 0, 0, alpha);
+    //    gm.corteDeLuz.GetComponent<RawImage>().color = new Color(0, 0, 0, alpha);
 
     //}
     //void GlitchOn() //ESTA ES LA PANTALLA TRANSLUCIDA
     //{
 
-    //    GameManager.instance.corteDeLuz.GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
+    //    gm.corteDeLuz.GetComponent<RawImage>().color = new Color(0, 0, 0, 0);
 
     //}
 
@@ -221,7 +237,7 @@ public class identificadorDeEfectos : MonoBehaviour
     //{
     //    float segundos = 4;
     //    tiempoTranscurrido += Time.deltaTime / segundos;
-    //    GameObject coso = GameManager.instance.paredes.transform.GetChild(0).gameObject;
+    //    GameObject coso = gm.paredes.transform.GetChild(0).gameObject;
     //    coso.GetComponent<Renderer>().material.color = new Color(1, 1, 1, tiempoTranscurrido);
 
 
@@ -231,7 +247,7 @@ public class identificadorDeEfectos : MonoBehaviour
     //{
     //    float segundos = 4;
     //    tiempoTranscurrido += Time.deltaTime / segundos;
-    //    GameObject coso = GameManager.instance.paredes.transform.GetChild(2).gameObject;
+    //    GameObject coso = gm.paredes.transform.GetChild(2).gameObject;
     //    coso.GetComponent<Renderer>().material.color = new Color(1, 1, 1, tiempoTranscurrido);
 
 

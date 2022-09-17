@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     //public GameObject paredes;
     public GameObject bebida;
 
-    //public GameObject jugador;
+    public GameObject jugador;
     //public PlayerInfo playerInfo;
 
     //public RawImage corteDeLuz;
