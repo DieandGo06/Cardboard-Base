@@ -1,22 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-//-----------------------------------------------------------------------
-// Basic movement when we want the player to move using a gamepad
-// Author (Discord): Gio#0753
-//-----------------------------------------------------------------------
 
 public class PlayerController : MonoBehaviour
 {
-
+    //Variables en editor
     public GameObject cam;
     public Transform googleTracked;
+    [SerializeField] bool usaJoystick;
+    public float speed = 3;
+
+    //Variables privadas
     Rigidbody rb;
 
-    int jumps = 1;
-    [SerializeField] bool usaJoystick;
-    [SerializeField] float speed = 3;
+    
 
 
 
@@ -32,6 +31,11 @@ public class PlayerController : MonoBehaviour
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
         else usaJoystick = false;
 #endif
+    }
+
+    private void Update()
+    {
+        Debug.Log(inputEntrante("anyKey"));
     }
 
 
@@ -64,7 +68,28 @@ public class PlayerController : MonoBehaviour
             Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
             rb.MovePosition(transform.position + move * Time.deltaTime);
         }
-        
+    }
+
+
+    string inputEntrante(string option)
+    {
+        if (option == "mouse")
+        {
+            Vector2 mouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+            return mouseInput.ToString();
+        }
+        if (option == "anyKey")
+        {
+            foreach (KeyCode kcode in Enum.GetValues(typeof(KeyCode)))
+            {
+                if (Input.GetKeyDown(kcode))
+                    return kcode.ToString();
+            }
+        }
+
+        if (option == "horizontal") return Input.GetAxis("Horizontal").ToString();
+        if (option == "vertical") return Input.GetAxis("Vertical").ToString();
+        return "no se ha usado el input buscado";
     }
 
 }

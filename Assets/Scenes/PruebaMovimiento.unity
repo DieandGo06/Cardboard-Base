@@ -3922,11 +3922,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1620007560797874210, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
       propertyPath: distMaxPlayerProducto
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1620007560797874210, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: distMinPlayerProducto
-      value: 5
+      propertyPath: distanciaObjetoAgarrado
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2722319881024299272, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
       propertyPath: m_Name
@@ -3976,12 +3976,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2722319881459185895, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+    - target: {fileID: 2722319881054861679, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2722319881459185895, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+    - target: {fileID: 2722319882025990619, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319882370500324, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
 --- !u!1 &3414877532253992181
 GameObject:

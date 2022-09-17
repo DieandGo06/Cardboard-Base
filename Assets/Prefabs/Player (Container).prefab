@@ -147,8 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camara: {fileID: 2352517868169550773}
   productoSeleccionado: {fileID: 0}
-  distMinPlayerProducto: 0
-  distMaxPlayerProducto: 0
+  distanciaObjetoAgarrado: 0
+  distMaxPlayerProducto: 5
   canGrab: 0
   producto: {fileID: 0}
 --- !u!1 &2352517868169550773
@@ -485,7 +485,6 @@ GameObject:
   - component: {fileID: 2722319881459185893}
   - component: {fileID: 2722319881459185897}
   - component: {fileID: 2722319881459185896}
-  - component: {fileID: 2722319881459185895}
   - component: {fileID: 2722319881459185894}
   m_Layer: 0
   m_Name: GoogleTracked
@@ -559,19 +558,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2722319881459185895
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2722319881459185892}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2722319881459185894
 MonoBehaviour:
   m_ObjectHideFlags: 0
