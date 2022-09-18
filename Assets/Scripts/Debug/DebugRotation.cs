@@ -12,6 +12,7 @@ public class DebugRotation : MonoBehaviour
     public bool showCamMoved;
     public bool showPlayerAngle;
     public bool showInputKey;
+    public bool showFps;
 
     Quaternion startRotation;
     string lastInput;
@@ -52,6 +53,7 @@ public class DebugRotation : MonoBehaviour
                 texto.text = player.GetComponent<PlayerController>().inputEntrante("anyKey");
             }
         }
+        
 
     }
 }
