@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6cee6462a194b864a946319c5723414a
+guid: 6120200ee40f3dd41a51d5069f6b918a
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -7,23 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.054
-    second: {fileID: 2100000, guid: e32dbdb6608d9a7459b038d2e6870d6c, type: 2}
+      name: Columnas
+    second: {fileID: 2100000, guid: 6d63e5a1dd407e340badd86c0732fd40, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.055
-    second: {fileID: 2100000, guid: 82b15d68673074c43968866f101fc98f, type: 2}
+      name: ParedSinVentana
+    second: {fileID: 2100000, guid: 51c64a7db834d0243ad3c6e2d3db935c, type: 2}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Material.056
-    second: {fileID: 2100000, guid: 8294f66c89717574c843a86a56de739c, type: 2}
+      name: pared
+    second: {fileID: 2800000, guid: 9db172579e2d30b42b3dcedc509b4f08, type: 3}
   - first:
-      type: UnityEngine:Material
+      type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: Material.057
-    second: {fileID: 2100000, guid: 105eacaafbe492c4399bb6c70860ef67, type: 2}
+      name: paredconVentana
+    second: {fileID: 2800000, guid: 9e2b5d451868ddf4b96878d2f3a27d5f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
