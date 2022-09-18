@@ -37,12 +37,12 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         carrito = GetComponentInChildren<CarritoManager>();
-        GameManager.instance.jugador = transform.gameObject;
         layerToRaycast = LayerMask.GetMask("Producto");
     }
 
     void Start()
     {
+        GameManager.instance.jugador = transform.gameObject;
 
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)

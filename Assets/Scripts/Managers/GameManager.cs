@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = limiteDeFps;
-        contadorBebida = 3;
+        contadorBebida = 2;
         contadorGalletitas = 2;
         contadorCereales = 2;
         contadorCarne = 2;
