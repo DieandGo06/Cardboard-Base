@@ -14,13 +14,14 @@ public class PlayerController : MonoBehaviour
     [Header("Variables setteables")]
     [SerializeField] float distanciaObjetoAgarrado;
     [SerializeField] float distMaxPlayerProducto;
-    public float speed = 3;
+    public float speed;
 
 
     [Header("Variables p/ debug")]
     public GameObject productoSeleccionado;
     [SerializeField] bool usaJoystick;
     [SerializeField] bool canGrab;
+    public bool desactivarEfectos;
 
     //Variables privadas
     Rigidbody rb;
@@ -36,15 +37,19 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {  
+        
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
         else usaJoystick = false;
 #endif
+        
     }
 
     private void Update()
     {
+
+        //Debug.Log(desactivarEfectos);
         //Debug.Log(inputEntrante("anyKey"));
 
         if (Input.GetMouseButtonDown(0) || inputEntrante("anyKey") == "JoystickButton4")
@@ -79,10 +84,14 @@ public class PlayerController : MonoBehaviour
             AgarrarProducto(other.gameObject);
         }
 
-        if (GetComponent<AudioSource>() != null)
+        if (other.GetComponent<AudioSource>() != null)
         {
             other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
+
+            Debug.Log("HOLAA");
         }
+
+       
 
     }
 

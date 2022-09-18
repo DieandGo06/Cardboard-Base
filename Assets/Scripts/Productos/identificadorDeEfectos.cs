@@ -27,7 +27,7 @@ public class identificadorDeEfectos : MonoBehaviour
     public Caminante caminante;
     public string nombreDeProducto;
     bool choca;
-    bool efecto;
+    bool desactivarEfecto;
 
 
     void Start()
@@ -39,7 +39,8 @@ public class identificadorDeEfectos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(gm.jugador.GetComponent<PlayerController>().speed);
+        Debug.Log(gm.jugador.GetComponent<PlayerController>().speed);
+   
 
 
 
@@ -76,20 +77,19 @@ public class identificadorDeEfectos : MonoBehaviour
         if (!seEjecutaUnaVez)
         {
 
-            if (choca) {
+            if (choca) 
+            {
+                    if (nombreDeProducto == "bebida")
+                    {
+                        gm.contadorBebida--;
+                    }
 
+                    if (nombreDeProducto == "galletitas")
+                    {
+                        gm.contadorGalletitas--;
 
-                if (nombreDeProducto == "bebida")
-                {
-                    gm.contadorBebida--;
-                    Lista(gm.contadorBebida);
-                }
-
-                if (nombreDeProducto == "galletitas")
-                {
-                    gm.contadorGalletitas--;
-                    Lista(gm.contadorGalletitas);
-
+                    if (gm.jugador.GetComponent<PlayerController>().desactivarEfectos == false)
+                    {
 
                         if (!esSaludable)
                         {
@@ -97,17 +97,17 @@ public class identificadorDeEfectos : MonoBehaviour
                         }
                         else if (esSaludable)
                         {
-                        float speed = 40;
-                        gm.jugador.GetComponent<PlayerController>().speed = speed;
 
-                            //AcelerarCarrito();
-                            Debug.Log("esto esta andando");
+                            AcelerarCarrito();
+
                         }
 
+                    }
                 }
 
                 seEjecutaUnaVez = true;
-
+                ActivarCaminante(gm.contadorBebida);
+                ActivarCaminante(gm.contadorGalletitas);
             }
         }
 
@@ -160,24 +160,27 @@ public class identificadorDeEfectos : MonoBehaviour
 
     }
 
-    //--------------- CODIGO DE LISTA------------------------------------
+    //--------------- CODIGO DE ActivarCaminante------------------------------------
     private void OnTriggerEnter(Collider other)
     {
-        ActivarCaminante();
+        HuboColision();
     }
 
 
-    void Lista (float contador ) {
+    void ActivarCaminante (float contador ) {
 
         if (contador == 0)
         {
             caminante.seMueve = true;
-          
+            gm.jugador.GetComponent<PlayerController>().desactivarEfectos = true;
+
         }
-
-
     }
-    void ActivarCaminante() {
+
+   
+
+
+    void HuboColision() {
         choca = true;
     }
 
@@ -208,13 +211,13 @@ public class identificadorDeEfectos : MonoBehaviour
     //powerUp carrito ------------------------------------------
     void RalentizarCarrito()
     {
-        gm.jugador.GetComponent<PlayerController>().speed -= 3;
+        gm.jugador.GetComponent<PlayerController>().speed -= 2;
     
     }
 
     void AcelerarCarrito()
     {
-        gm.jugador.GetComponent<PlayerController>().speed += 3;
+        gm.jugador.GetComponent<PlayerController>().speed += 2;
     }
 
     ////Luces -----------------------------------------------------------------------------------------

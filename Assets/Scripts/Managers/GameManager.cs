@@ -31,6 +31,6 @@ public class GameManager : MonoBehaviour
      Application.targetFrameRate = limiteDeFps;
         contadorBebida = 3;
         contadorGalletitas = 2;
-        Debug.Log(contadorGalletitas);
+        
     }
 }
