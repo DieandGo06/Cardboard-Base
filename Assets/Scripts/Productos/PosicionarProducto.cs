@@ -61,8 +61,8 @@ public class PosicionarProducto : MonoBehaviour
         transform.rotation = Quaternion.Euler(Vector3.zero);
 
         float posY = transform.parent.localScale.y;
-        //transform.localPosition = new Vector3(0, posY, 0);
-        transform.localPosition = new Vector3(0, 0, 0);
+        transform.position = new Vector3(0, posY, 0);
+        //transform.localPosition = new Vector3(0, 0, 0);
 
     }
 
