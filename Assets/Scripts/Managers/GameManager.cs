@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     private int limiteDeFps = 30;
     public float contadorBebida;
     public float contadorGalletitas;
+    public float contadorCereales;
+    public float contadorCarne;
+    public float contadorGolosinas;
 
     private void Awake()
     {
@@ -28,9 +31,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-     Application.targetFrameRate = limiteDeFps;
+        Application.targetFrameRate = limiteDeFps;
         contadorBebida = 3;
         contadorGalletitas = 2;
-        
+        contadorCereales = 2;
+        contadorCarne = 2;
+        contadorGolosinas = 1;
+
     }
 }

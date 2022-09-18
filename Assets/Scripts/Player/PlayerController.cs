@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         {
             other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
 
-            Debug.Log("HOLAA");
+            //Debug.Log("HOLAA");
         }
 
        
