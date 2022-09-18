@@ -37,12 +37,12 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         carrito = GetComponentInChildren<CarritoManager>();
+        GameManager.instance.jugador = transform.gameObject;
         layerToRaycast = LayerMask.GetMask("Producto");
     }
 
     void Start()
     {
-        GameManager.instance.jugador = transform.gameObject;
 
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
@@ -146,13 +146,22 @@ public class PlayerController : MonoBehaviour
             //El orden de los raycast marca la prioridad de los mismo por si golpean golpean a dos productos a la vez
             Vector3 origin = Vector3.zero;
             if (i == 0) origin = cam.transform.position;
-            else if (i == 1) origin = cam.transform.position + (Vector3.up * 0.2f);
-            else if (i == 2) origin = cam.transform.position + (Vector3.down * 0.2f);
-            else if (i == 3) origin = cam.transform.position + (Vector3.right * 0.2f);
-            else if (i == 4) origin = cam.transform.position + (Vector3.left * 0.2f);
+            else if (i == 1) origin = cam.transform.position + (Vector3.up * 0.1f);
+            else if (i == 2) origin = cam.transform.position + (Vector3.down * 0.1f);
+            else if (i == 3) origin = cam.transform.position + (Vector3.right * 0.1f);
+            else if (i == 4) origin = cam.transform.position + (Vector3.left * 0.1f);
             Physics.Raycast(origin, cam.transform.TransformDirection(Vector3.forward), out hits[i], distMaxPlayerProducto, layerToRaycast);
             Debug.DrawRay(origin, cam.transform.TransformDirection(Vector3.forward) * hits[i].distance, Color.yellow);
 
+            //if (playOne)
+            //{
+            //    GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            //    obj.transform.localScale = Vector3.one * 0.1f;
+            //    obj.transform.position = origin;
+            //    obj.GetComponent<BoxCollider>().isTrigger = true;
+            //    obj.transform.parent = cam.transform;
+            //}
+            
             if (hits[i].collider != null && hits[i].transform.CompareTag("Producto"))
             {
                 productoSeleccionable = hits[i].collider.transform.gameObject;
