@@ -1569,7 +1569,7 @@ MonoBehaviour:
   cam: {fileID: 2352517868169550773}
   googleTracked: {fileID: 2722319881459185893}
   distanciaObjetoAgarrado: 1.5
-  distMaxPlayerProducto: 200
+  distanciaAgarrarProducto: 2.5
   speed: 5
   desactivarEfectos: 0
   productoSeleccionable: {fileID: 0}

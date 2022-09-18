@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Variables setteables")]
     [SerializeField] float distanciaObjetoAgarrado;
-    [SerializeField] float distMaxPlayerProducto;
+    [SerializeField] float distanciaAgarrarProducto;
     public float speed;
 
 
@@ -150,17 +150,8 @@ public class PlayerController : MonoBehaviour
             else if (i == 2) origin = cam.transform.position + (Vector3.down * 0.1f);
             else if (i == 3) origin = cam.transform.position + (Vector3.right * 0.1f);
             else if (i == 4) origin = cam.transform.position + (Vector3.left * 0.1f);
-            Physics.Raycast(origin, cam.transform.TransformDirection(Vector3.forward), out hits[i], distMaxPlayerProducto, layerToRaycast);
+            Physics.Raycast(origin, cam.transform.TransformDirection(Vector3.forward), out hits[i], distanciaAgarrarProducto, layerToRaycast);
             Debug.DrawRay(origin, cam.transform.TransformDirection(Vector3.forward) * hits[i].distance, Color.yellow);
-
-            //if (playOne)
-            //{
-            //    GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            //    obj.transform.localScale = Vector3.one * 0.1f;
-            //    obj.transform.position = origin;
-            //    obj.GetComponent<BoxCollider>().isTrigger = true;
-            //    obj.transform.parent = cam.transform;
-            //}
             
             if (hits[i].collider != null && hits[i].transform.CompareTag("Producto"))
             {

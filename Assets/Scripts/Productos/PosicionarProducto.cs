@@ -60,8 +60,8 @@ public class PosicionarProducto : MonoBehaviour
         transform.parent = carrito.GetEmptySpace().transform;
         transform.rotation = Quaternion.Euler(Vector3.zero);
 
-        float posY = transform.parent.localScale.y;
-        transform.position = new Vector3(0, posY, 0);
+        float posY = transform.parent.lossyScale.y;
+        transform.localPosition = new Vector3(0, posY, 0);
         //transform.localPosition = new Vector3(0, 0, 0);
 
     }
