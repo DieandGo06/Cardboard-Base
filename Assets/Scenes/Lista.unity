@@ -138,9 +138,10 @@ GameObject:
   - component: {fileID: 4741183}
   - component: {fileID: 4741182}
   - component: {fileID: 4741181}
-  m_Layer: 0
+  - component: {fileID: 4741188}
+  m_Layer: 6
   m_Name: galletita 4
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 988385120}
   nombreDeProducto: galletitas
 --- !u!65 &4741184
 BoxCollider:
@@ -340,14 +340,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4741180}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.873, y: 0.76, z: -3.7020001}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.757693, y: 0, z: 15.607692}
+  m_LocalScale: {x: 1.076923, y: 1.076923, z: 1.076923}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4741188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4741180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &118853426
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,9 +378,10 @@ GameObject:
   - component: {fileID: 118853429}
   - component: {fileID: 118853428}
   - component: {fileID: 118853427}
-  m_Layer: 0
+  - component: {fileID: 118853434}
+  m_Layer: 6
   m_Name: carne2 (1)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -493,7 +509,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 874772077}
   nombreDeProducto: carne
 --- !u!65 &118853430
 BoxCollider:
@@ -565,14 +580,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118853426}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.43, y: 0.76, z: -0.18}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13.76923, y: 0, z: 29.153847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &118853434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118853426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1001 &142001935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -586,7 +616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
       propertyPath: m_LocalPosition.x
@@ -712,7 +742,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281927999
 GameObject:
@@ -796,7 +826,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341256152
 GameObject:
@@ -880,7 +910,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &347504422
 GameObject:
@@ -995,7 +1025,8 @@ GameObject:
   - component: {fileID: 474388988}
   - component: {fileID: 474388987}
   - component: {fileID: 474388986}
-  m_Layer: 0
+  - component: {fileID: 474388993}
+  m_Layer: 6
   m_Name: galletita 1
   m_TagString: Producto
   m_Icon: {fileID: 0}
@@ -1125,7 +1156,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 988385120}
   nombreDeProducto: galletitas
 --- !u!65 &474388989
 BoxCollider:
@@ -1197,14 +1227,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 474388985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.72, y: 0.81, z: -0.3}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.884617, y: 0.19230773, z: 28.692307}
+  m_LocalScale: {x: 1.1538461, y: 1.1538461, z: 1.1538461}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474388993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474388985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &526954184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,9 +1265,10 @@ GameObject:
   - component: {fileID: 526954187}
   - component: {fileID: 526954186}
   - component: {fileID: 526954185}
-  m_Layer: 0
+  - component: {fileID: 526954192}
+  m_Layer: 6
   m_Name: cereal2
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1350,7 +1396,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 718752197}
   nombreDeProducto: cereales
 --- !u!65 &526954188
 BoxCollider:
@@ -1422,14 +1467,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526954184}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.43, y: 0.76, z: -8.82}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.6153848, y: 0, z: -4.076921}
+  m_LocalScale: {x: 1.076923, y: 1.076923, z: 1.076923}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &526954192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526954184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &553245049
 GameObject:
   m_ObjectHideFlags: 0
@@ -1512,7 +1572,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &645341000
 PrefabInstance:
@@ -1521,6 +1581,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 585662835703706070, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
+      propertyPath: m_Name
+      value: tachaduraGalletitas
+      objectReference: {fileID: 0}
+    - target: {fileID: 748562761728050913, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
+      propertyPath: m_Name
+      value: tachaduraCereales
+      objectReference: {fileID: 0}
     - target: {fileID: 1217103963009781734, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
       propertyPath: m_Emitting
       value: 1
@@ -1701,9 +1769,10 @@ GameObject:
   - component: {fileID: 768111301}
   - component: {fileID: 768111300}
   - component: {fileID: 768111299}
-  m_Layer: 0
+  - component: {fileID: 768111306}
+  m_Layer: 6
   m_Name: bebida (1)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1831,7 +1900,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &768111302
 BoxCollider:
@@ -1903,14 +1971,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768111298}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.68, y: 0.76, z: -0.18}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.884615, y: 0, z: 29.153847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &768111306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768111298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &795185053
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,9 +2009,10 @@ GameObject:
   - component: {fileID: 795185056}
   - component: {fileID: 795185055}
   - component: {fileID: 795185054}
-  m_Layer: 0
+  - component: {fileID: 795185061}
+  m_Layer: 6
   m_Name: cereal
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2056,7 +2140,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 718752197}
   nombreDeProducto: cereales
 --- !u!65 &795185057
 BoxCollider:
@@ -2128,39 +2211,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795185053}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.79, y: 0.74, z: -7.8}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.615386, y: -0.076923, z: -0.153846}
+  m_LocalScale: {x: 1.1538461, y: 1.1538461, z: 1.1538461}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &795185061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795185053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!114 &854617247 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6031842435713194245, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 645341000}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &874772077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1833600584782360033, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 645341000}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &917678160 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 677861737195725242, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
   m_PrefabInstance: {fileID: 645341000}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -2251,7 +2327,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934497286
 GameObject:
@@ -2268,9 +2344,10 @@ GameObject:
   - component: {fileID: 934497289}
   - component: {fileID: 934497288}
   - component: {fileID: 934497287}
-  m_Layer: 0
+  - component: {fileID: 934497294}
+  m_Layer: 6
   m_Name: carne2 (2)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2398,7 +2475,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 874772077}
   nombreDeProducto: carne
 --- !u!65 &934497290
 BoxCollider:
@@ -2470,14 +2546,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934497286}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.79, y: 0.76, z: -0.18}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.692308, y: 0, z: 29.153847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &934497294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 934497286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &964161897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2493,9 +2584,10 @@ GameObject:
   - component: {fileID: 964161900}
   - component: {fileID: 964161899}
   - component: {fileID: 964161898}
-  m_Layer: 0
+  - component: {fileID: 964161905}
+  m_Layer: 6
   m_Name: cereal3
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2623,7 +2715,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 718752197}
   nombreDeProducto: cereales
 --- !u!65 &964161901
 BoxCollider:
@@ -2695,14 +2786,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964161897}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.73, y: 0.74, z: -7.8}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -19.692308, y: -0.076923, z: -0.153846}
+  m_LocalScale: {x: 1.1538461, y: 1.1538461, z: 1.1538461}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964161905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964161897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!114 &988385120 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8240467026891672763, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
@@ -2729,9 +2835,10 @@ GameObject:
   - component: {fileID: 1212724940}
   - component: {fileID: 1212724939}
   - component: {fileID: 1212724938}
-  m_Layer: 0
+  - component: {fileID: 1212724945}
+  m_Layer: 6
   m_Name: cereal1
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2859,7 +2966,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 718752197}
   nombreDeProducto: cereales
 --- !u!65 &1212724941
 BoxCollider:
@@ -2931,14 +3037,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1212724937}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.05, y: 0.76, z: -7.602}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.0769236, y: 0, z: 0.60769224}
+  m_LocalScale: {x: 1.076923, y: 1.076923, z: 1.076923}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1212724945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212724937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &1276719603
 GameObject:
   m_ObjectHideFlags: 0
@@ -2954,9 +3075,10 @@ GameObject:
   - component: {fileID: 1276719606}
   - component: {fileID: 1276719605}
   - component: {fileID: 1276719604}
-  m_Layer: 0
+  - component: {fileID: 1276719611}
+  m_Layer: 6
   m_Name: galletita3
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3084,7 +3206,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 988385120}
   nombreDeProducto: galletitas
 --- !u!65 &1276719607
 BoxCollider:
@@ -3156,14 +3277,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1276719603}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.79, y: 0.76, z: -0.49}
-  m_LocalScale: {x: 0.28, y: 0.28, z: 0.28}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.076925, y: 0, z: 27.96154}
+  m_LocalScale: {x: 1.076923, y: 1.076923, z: 1.076923}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1276719611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276719603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &1346770522
 GameObject:
   m_ObjectHideFlags: 0
@@ -3340,7 +3476,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642389413
 GameObject:
@@ -3357,9 +3493,10 @@ GameObject:
   - component: {fileID: 1642389416}
   - component: {fileID: 1642389415}
   - component: {fileID: 1642389414}
-  m_Layer: 0
+  - component: {fileID: 1642389421}
+  m_Layer: 6
   m_Name: golosina (1)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3487,7 +3624,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 917678160}
   nombreDeProducto: golosinas
 --- !u!65 &1642389417
 BoxCollider:
@@ -3559,13 +3695,77 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1642389413}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.7, y: 0.82, z: -3.64}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.192308, y: 0.23076923, z: 15.846153}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1642389421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1642389413}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
+--- !u!1 &1657953208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1657953209}
+  m_Layer: 6
+  m_Name: productos
+  m_TagString: Producto
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1657953209
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1657953208}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.85, y: 0.76, z: -7.76}
+  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1946799258}
+  - {fileID: 1642389420}
+  - {fileID: 795185060}
+  - {fileID: 526954191}
+  - {fileID: 964161904}
+  - {fileID: 1212724944}
+  - {fileID: 118853433}
+  - {fileID: 934497293}
+  - {fileID: 2061033145}
+  - {fileID: 768111305}
+  - {fileID: 1805106088}
+  - {fileID: 1708049523}
+  - {fileID: 1702250046}
+  - {fileID: 2138516963}
+  - {fileID: 1276719610}
+  - {fileID: 474388992}
+  - {fileID: 4741187}
+  - {fileID: 1965511075}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1702250039
 GameObject:
@@ -3582,9 +3782,10 @@ GameObject:
   - component: {fileID: 1702250042}
   - component: {fileID: 1702250041}
   - component: {fileID: 1702250040}
-  m_Layer: 0
+  - component: {fileID: 1702250047}
+  m_Layer: 6
   m_Name: bebida (4)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3712,7 +3913,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &1702250043
 BoxCollider:
@@ -3784,14 +3984,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1702250039}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.85, y: 0.76, z: -7.76}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1702250047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702250039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &1708049516
 GameObject:
   m_ObjectHideFlags: 0
@@ -3807,9 +4022,10 @@ GameObject:
   - component: {fileID: 1708049519}
   - component: {fileID: 1708049518}
   - component: {fileID: 1708049517}
-  m_Layer: 0
+  - component: {fileID: 1708049524}
+  m_Layer: 6
   m_Name: bebida (3)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3937,7 +4153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &1708049520
 BoxCollider:
@@ -4009,14 +4224,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1708049516}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.86, y: 0.76, z: -3.81}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.03845875, y: 0, z: 15.192308}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1708049524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708049516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &1805106081
 GameObject:
   m_ObjectHideFlags: 0
@@ -4032,9 +4262,10 @@ GameObject:
   - component: {fileID: 1805106084}
   - component: {fileID: 1805106083}
   - component: {fileID: 1805106082}
-  m_Layer: 0
+  - component: {fileID: 1805106089}
+  m_Layer: 6
   m_Name: bebida (2)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4162,7 +4393,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &1805106085
 BoxCollider:
@@ -4234,14 +4464,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1805106081}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.44, y: 0.76, z: -3.81}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.961535, y: 0, z: 15.192308}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1805106089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805106081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &1946799251
 GameObject:
   m_ObjectHideFlags: 0
@@ -4257,9 +4502,10 @@ GameObject:
   - component: {fileID: 1946799254}
   - component: {fileID: 1946799253}
   - component: {fileID: 1946799252}
-  m_Layer: 0
+  - component: {fileID: 1946799259}
+  m_Layer: 6
   m_Name: golosina
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4387,7 +4633,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 917678160}
   nombreDeProducto: golosinas
 --- !u!65 &1946799255
 BoxCollider:
@@ -4459,14 +4704,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946799251}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.7, y: 0.68, z: -0.18}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 30.192308, y: -0.30769223, z: 29.153847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1946799259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946799251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &1965511068
 GameObject:
   m_ObjectHideFlags: 0
@@ -4482,9 +4742,10 @@ GameObject:
   - component: {fileID: 1965511071}
   - component: {fileID: 1965511070}
   - component: {fileID: 1965511069}
-  m_Layer: 0
+  - component: {fileID: 1965511076}
+  m_Layer: 6
   m_Name: galletita
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4612,7 +4873,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 988385120}
   nombreDeProducto: galletitas
 --- !u!65 &1965511072
 BoxCollider:
@@ -4684,14 +4944,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965511068}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.79, y: 0.74, z: -3.9}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.615386, y: -0.076923, z: 14.846154}
+  m_LocalScale: {x: 1.1538461, y: 1.1538461, z: 1.1538461}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1965511076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965511068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &2061033138
 GameObject:
   m_ObjectHideFlags: 0
@@ -4707,9 +4982,10 @@ GameObject:
   - component: {fileID: 2061033141}
   - component: {fileID: 2061033140}
   - component: {fileID: 2061033139}
-  m_Layer: 0
+  - component: {fileID: 2061033146}
+  m_Layer: 6
   m_Name: bebida
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4837,7 +5113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &2061033142
 BoxCollider:
@@ -4909,14 +5184,29 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061033138}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.78, y: 0.76, z: -0.18}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.26923326, y: 0, z: 29.153847}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061033146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061033138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
 --- !u!1 &2092618054
 GameObject:
   m_ObjectHideFlags: 0
@@ -4946,6 +5236,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9d1ffe08765c644ad1413c920b5d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caminanteFrutas: {fileID: 854617247}
+  caminanteGalletitas: {fileID: 988385120}
+  caminanteCereales: {fileID: 718752197}
   bebida: {fileID: 0}
   jugador: {fileID: 0}
   contadorBebida: 0
@@ -4983,9 +5276,10 @@ GameObject:
   - component: {fileID: 2138516959}
   - component: {fileID: 2138516958}
   - component: {fileID: 2138516957}
-  m_Layer: 0
+  - component: {fileID: 2138516964}
+  m_Layer: 6
   m_Name: bebida (5)
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5113,7 +5407,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 854617247}
   nombreDeProducto: bebida
 --- !u!65 &2138516960
 BoxCollider:
@@ -5185,11 +5478,26 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138516956}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.49, y: 0.76, z: -7.73}
-  m_LocalScale: {x: 0.26, y: 0.26, z: 0.26}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.153844, y: 0, z: 0.11538542}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_Father: {fileID: 1657953209}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2138516964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138516956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
