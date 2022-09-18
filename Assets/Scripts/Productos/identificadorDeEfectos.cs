@@ -18,7 +18,7 @@ public class identificadorDeEfectos : MonoBehaviour
     bool seEjecutaUnaVez;
 
     //Para el caminante
-    public Caminante caminante;
+  
     public string nombreDeProducto;
     bool choca;
     bool desactivarEfecto;
@@ -35,9 +35,9 @@ public class identificadorDeEfectos : MonoBehaviour
     {
         Debug.Log("contGalles"+ gm.contadorGalletitas);
         Debug.Log("contFruta" + gm.contadorBebida);
-        Debug.Log("contCarne" + gm.contadorCarne);
+        //Debug.Log("contCarne" + gm.contadorCarne);
 
-        // Debug.Log("contCereales" + gm.contadorCereales);
+        Debug.Log("contCereales" + gm.contadorCereales);
 
 
         if (!seEjecutaUnaVez)
@@ -70,22 +70,23 @@ public class identificadorDeEfectos : MonoBehaviour
                     ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
                 }
 
-                //if (nombreDeProducto == "cereales")
-                //{
-                //    gm.contadorCereales--;
-                //    ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
-                //}
+                if (nombreDeProducto == "cereales")
+                {
+                    gm.contadorCereales--;
+                    ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
+                }
 
-                //if (gm.contadorCereales != 0 && gm.contadorCereales != 0) {
-                //    gm.jugador.GetComponent<PlayerController>().desactivarEfectos = false;
-                //}
+                if (gm.contadorGalletitas != 0 && gm.contadorCereales != 0)
+                {
+                    gm.jugador.GetComponent<PlayerController>().desactivarEfectos = false;
+                }
 
                 seEjecutaUnaVez = true;
-                ActivarCaminante(gm.contadorBebida);
-                ActivarCaminante(gm.contadorGalletitas);
-               // ActivarCaminante(gm.contadorCereales);
-                ActivarCaminante(gm.contadorCarne);
-                ActivarCaminante(gm.contadorGolosinas);
+                //ActivarCaminante(gm.contadorBebida);
+               // ActivarCaminante(gm.contadorGalletitas);
+               //// ActivarCaminante(gm.contadorCereales);
+               // ActivarCaminante(gm.contadorCarne);
+               // ActivarCaminante(gm.contadorGolosinas);
             }
         }
 
@@ -105,16 +106,15 @@ public class identificadorDeEfectos : MonoBehaviour
     }
 
 
-    void ActivarCaminante(float contador)
-    {
+    //void ActivarCaminante(float contador)
+    //{
 
-        if (contador == 0)
-        {
-            caminante.seMueve = true;
-            gm.jugador.GetComponent<PlayerController>().desactivarEfectos = true;
-
-        }
-    }
+    //    if (contador == 0)
+    //    {
+    //        caminante.seMueve = true;
+    //        gm.jugador.GetComponent<PlayerController>().desactivarEfectos = true;
+    //    }
+    //}
 
 
     void HuboColision()
