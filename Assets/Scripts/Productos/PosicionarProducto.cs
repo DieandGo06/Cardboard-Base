@@ -4,55 +4,80 @@ using UnityEngine;
 
 public class PosicionarProducto : MonoBehaviour
 {
-    public Transform gondolaPosition;
-    public Transform carritoPosition;
+    public Transform gondolaSpace;
+    public CarritoManager carrito;
+    public bool OnCollisionCarrito;
 
 
-
-    private void Awake()
+    private void Start()
     {
-        if (transform.parent != null)
-        {
-            gondolaPosition = transform.parent.transform;
-        }
+        carrito = GameManager.instance.jugador.GetComponent<PlayerController>().carrito;
+        CrearGondolaSpaceInicial();
     }
-
 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("GondolaSpace"))
         {
-            gondolaPosition = other.transform;
+            gondolaSpace = other.transform;
         }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
         if (other.CompareTag("Carrito"))
         {
-            if (other.transform.GetComponent<CarritoManager>() != null)
-            {
-                carritoPosition = other.transform.GetComponent<CarritoManager>().GetEmptySpace().transform;
-                SetNewPosition();//Mete el producto de forma automatica cuando toca el cllider de carrito
-            }
+            OnCollisionCarrito = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Carrito"))
+        {
+            OnCollisionCarrito = false;
         }
     }
 
 
 
     //Se ejecuta en el script PlayerAction
-    public void SetNewPosition()
+    public void DejarEnGondola()
     {
-        if (carritoPosition == null)
-        {
-            transform.parent = gondolaPosition;
-            transform.rotation = Quaternion.Euler(Vector3.zero);
-            //float posY = (transform.localScale.y / 2) - (transform.parent.localScale.y / 2);
-        }
-        else
-        {
-            transform.tag = "Comprado";
-            transform.parent = carritoPosition;
-            transform.rotation = Quaternion.Euler(Vector3.zero);
-        }
+        transform.tag = "Producto";
+        transform.parent = gondolaSpace;
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+
         float posY = transform.parent.localScale.y;
         transform.localPosition = new Vector3(0, posY, 0);
+        //float posY = (transform.localScale.y / 2) - (transform.parent.localScale.y / 2);
+    }
+
+    public void DejarEnCarrito()
+    {
+        transform.tag = "Comprado";
+        transform.parent = carrito.GetEmptySpace().transform;
+        transform.rotation = Quaternion.Euler(Vector3.zero);
+
+        float posY = transform.parent.localScale.y;
+        //transform.localPosition = new Vector3(0, posY, 0);
+        //transform.localPosition = new Vector3(0, 0, 0);
+
+    }
+
+    void CrearGondolaSpaceInicial()
+    {
+        GameObject espacioInicial = GameObject.CreatePrimitive(PrimitiveType.Cube);
+        espacioInicial.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        espacioInicial.transform.position = transform.position;
+        espacioInicial.transform.rotation = transform.rotation;
+        espacioInicial.transform.name = "GondolaSpace";
+        espacioInicial.transform.tag = "GondolaSpace";
+        transform.parent = espacioInicial.transform;
+        gondolaSpace = espacioInicial.transform;
+
+        espacioInicial.GetComponent<BoxCollider>().isTrigger = true;
+
     }
 }

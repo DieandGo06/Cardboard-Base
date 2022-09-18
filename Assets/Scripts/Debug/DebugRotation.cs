@@ -11,8 +11,10 @@ public class DebugRotation : MonoBehaviour
     public bool showCamAngle;
     public bool showCamMoved;
     public bool showPlayerAngle;
+    public bool showInputKey;
 
     Quaternion startRotation;
+    string lastInput;
 
 
 
@@ -43,5 +45,13 @@ public class DebugRotation : MonoBehaviour
         {
             if (cam.transform.rotation != startRotation) texto.text = "true";
         }
+        if (showInputKey)
+        {
+            if (player.GetComponent<PlayerController>().inputEntrante("anyKey") != "")
+            {
+                texto.text = player.GetComponent<PlayerController>().inputEntrante("anyKey");
+            }
+        }
+
     }
 }
