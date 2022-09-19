@@ -231,6 +231,7 @@ public class PlayerController : MonoBehaviour
             {
                 producto.DejarEnCarrito();
                 producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoMeter);
+                productoSeleccionado.GetComponent<identificadorDeEfectos>().ReducirContadoryActivarEfectos();
             }
             else
             {
