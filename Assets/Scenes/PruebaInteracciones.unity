@@ -285,7 +285,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &19957167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,8 +301,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843196}
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &19957168
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -561,6 +563,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9d1ffe08765c644ad1413c920b5d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  caminanteFrutas: {fileID: 0}
+  caminanteGalletitas: {fileID: 0}
+  caminanteCereales: {fileID: 0}
   bebida: {fileID: 0}
   jugador: {fileID: 0}
   contadorBebida: 0
@@ -581,7 +586,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &233180769
 GameObject:
@@ -679,7 +684,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362621360
 GameObject:
@@ -843,7 +848,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &362621365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -857,8 +864,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843199}
   nombreDeProducto: carne
+  parpados: {fileID: 0}
 --- !u!65 &362621366
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1084,7 +1091,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &417301486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1098,8 +1107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 1509843197}
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &417301487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1325,7 +1334,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &517261233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1339,8 +1350,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843197}
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &517261234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1734,7 +1745,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &656840314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1748,8 +1761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843197}
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &656840315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1975,7 +1988,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &825724690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1989,8 +2004,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843196}
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &825724691
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2216,7 +2231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 0d87cd7ad0e1a8948af2b826b5148af7, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 8f7f2b687c29d9246bb43170ca6b0c44, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &871072175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2230,8 +2247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 1509843200}
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &871072176
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2295,63 +2312,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871072170}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &919192515
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2722319881024299272, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_Name
-      value: Player (Container)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
 --- !u!1 &1016598878
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2474,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1016598883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2528,8 +2490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843196}
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1016598884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2755,7 +2717,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1124239800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2769,8 +2733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843198}
   nombreDeProducto: golosinas
+  parpados: {fileID: 0}
 --- !u!65 &1124239801
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2996,7 +2960,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1144460741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3010,8 +2976,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843196}
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1144460742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3237,7 +3203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1212263253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3251,8 +3219,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843199}
   nombreDeProducto: carne
+  parpados: {fileID: 0}
 --- !u!65 &1212263254
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3478,7 +3446,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1297222263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3492,8 +3462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843196}
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1297222264
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3719,7 +3689,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1306094233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3733,8 +3705,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843196}
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1306094234
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3882,6 +3854,63 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1348672660}
   m_Mesh: {fileID: 3518349261281230247, guid: a200eaf9496c04c4d81fc43b0da7f43f, type: 3}
+--- !u!1001 &1411396238
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2722319881024299272, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_Name
+      value: Player (Container)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2722319881024299273, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
 --- !u!1 &1453536512
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,7 +4057,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 20deb14b42ea35f4bb193a11b1826647, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 8f7f2b687c29d9246bb43170ca6b0c44, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1453536516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4042,8 +4073,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843200}
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &1453536517
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4268,61 +4299,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
---- !u!114 &1509843196 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6031842435713194245, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 1509843195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1509843197 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7968482709982692273, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 1509843195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1509843198 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 677861737195725242, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 1509843195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1509843199 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1833600584782360033, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 1509843195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1509843200 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8240467026891672763, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 1509843195}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1527440397
 GameObject:
   m_ObjectHideFlags: 0
@@ -4485,7 +4461,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1527440402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4499,8 +4477,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 1509843197}
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &1527440403
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4646,7 +4624,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &1693696923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4660,8 +4640,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843200}
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!82 &1693696924
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4952,7 +4932,7 @@ Transform:
   - {fileID: 1016598879}
   - {fileID: 1144460737}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1882064955
 GameObject:
@@ -4989,7 +4969,7 @@ Transform:
   - {fileID: 1348672661}
   - {fileID: 522658118}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012571171
 GameObject:
@@ -5153,7 +5133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 8f7f2b687c29d9246bb43170ca6b0c44, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &2012571176
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5167,8 +5149,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 1
-  caminante: {fileID: 1509843200}
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &2012571177
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5394,7 +5376,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!114 &2077478877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5408,8 +5392,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  caminante: {fileID: 1509843198}
   nombreDeProducto: golosinas
+  parpados: {fileID: 0}
 --- !u!65 &2077478878
 BoxCollider:
   m_ObjectHideFlags: 0
