@@ -189,7 +189,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 0d87cd7ad0e1a8948af2b826b5148af7, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 8f7f2b687c29d9246bb43170ca6b0c44, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &45821715
 AudioSource:
   m_ObjectHideFlags: 0
@@ -474,7 +475,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &78239858
 AudioSource:
   m_ObjectHideFlags: 0
@@ -715,7 +717,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &81189465
 AudioSource:
   m_ObjectHideFlags: 0
@@ -956,7 +959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &211249083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1197,7 +1201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &260063440
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1624,7 +1629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &458955077
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1924,7 +1930,7 @@ RectTransform:
   m_GameObject: {fileID: 544468511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 48.50809, y: 3.3737037, z: 1}
+  m_LocalScale: {x: 48.50809, y: 5.0602183, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 402712878}
@@ -1932,7 +1938,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500}
+  m_AnchoredPosition: {x: 0, y: -600}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &544468513
@@ -2090,7 +2096,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &610867468
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2331,7 +2338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &672472416
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2705,7 +2713,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &847010911
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3373,7 +3382,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &1159764658
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3614,7 +3624,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &1288880496
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3855,7 +3866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &1302559077
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4163,7 +4175,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &1538359387
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4498,7 +4511,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 8f7f2b687c29d9246bb43170ca6b0c44, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &1901740663
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4739,7 +4753,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &1930267658
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4980,7 +4995,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 2fc6f06e31b0aed4baaff1b3e16b9135, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &2006377087
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5221,7 +5237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
-  SonidoLanzar: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &2019235980
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5423,7 +5440,7 @@ RectTransform:
   m_GameObject: {fileID: 2034745748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 48.50809, y: 3.373704, z: 1}
+  m_LocalScale: {x: 48.50809, y: 5.0602183, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 402712878}
@@ -5431,7 +5448,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 500}
+  m_AnchoredPosition: {x: 0, y: 600}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2034745750
@@ -5535,7 +5552,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ElSonido: {fileID: 8300000, guid: 20deb14b42ea35f4bb193a11b1826647, type: 3}
-  SonidoLanzar: {fileID: 8300000, guid: 8f7f2b687c29d9246bb43170ca6b0c44, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
 --- !u!82 &2054448375
 AudioSource:
   m_ObjectHideFlags: 0
