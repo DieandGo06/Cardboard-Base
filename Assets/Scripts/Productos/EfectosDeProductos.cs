@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System;
 using UnityEngine;
-using UnityEngine.UI; //IMPORTANTE!!!!
-//using UnityEngine.Rendering;
-//using UnityEngine.Rendering.Universal;
+using System;
 
-public class identificadorDeEfectos : MonoBehaviour
+public class EfectosDeProductos : MonoBehaviour
 {
     public bool esSaludable;
     GameManager gm;
@@ -181,7 +178,7 @@ public class identificadorDeEfectos : MonoBehaviour
 
     void CarritoResbaloso()
     {
-        Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+
     }
 
     void CarritoFuerte()

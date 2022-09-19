@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
-        //if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
+        if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
         else usaJoystick = false;
 #endif
 
