@@ -39,6 +39,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.4444966, g: 0.4937061, b: 0.5724998, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -161,6 +162,10 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 4bdf0762544643143ba19980ac7ec32b, type: 3}
   SonidoDejar: {fileID: 8300000, guid: ceb0c1fa999d7ad40bffb810f0f784fb, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 9958fb187c2b1d14f9398153c42de179, type: 3}
+  ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &4741182
 AudioSource:
   m_ObjectHideFlags: 0
@@ -271,6 +276,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 1
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &4741184
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -402,6 +408,10 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  ElSonido: {fileID: 0}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 8300000, guid: 931a241eab258b04b9b95b446665f2ee, type: 3}
 --- !u!82 &118853428
 AudioSource:
   m_ObjectHideFlags: 0
@@ -414,7 +424,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -512,6 +522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: carne
+  parpados: {fileID: 0}
 --- !u!65 &118853430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1127,6 +1138,10 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 4bdf0762544643143ba19980ac7ec32b, type: 3}
   SonidoDejar: {fileID: 8300000, guid: ceb0c1fa999d7ad40bffb810f0f784fb, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 9958fb187c2b1d14f9398153c42de179, type: 3}
+  ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &474388987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1237,6 +1252,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &474388989
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1404,6 +1420,9 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 8300000, guid: a1d702f397092fe40ac77f0eccbf5558, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 7a244bddd3478184f80a00cf7fef8f5c, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &526954186
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1514,6 +1533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 1
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &526954188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1901,6 +1921,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &768111300
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2011,6 +2032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &768111302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2142,6 +2164,9 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 8300000, guid: a1d702f397092fe40ac77f0eccbf5558, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 7a244bddd3478184f80a00cf7fef8f5c, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &795185055
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2252,6 +2277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &795185057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2467,6 +2493,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &934497288
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2575,8 +2602,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esSaludable: 0
+  esSaludable: 1
   nombreDeProducto: carne
+  parpados: {fileID: 0}
 --- !u!65 &934497290
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2708,6 +2736,9 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 8300000, guid: a1d702f397092fe40ac77f0eccbf5558, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 7a244bddd3478184f80a00cf7fef8f5c, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &964161899
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2818,6 +2849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &964161901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3044,6 +3076,9 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 8300000, guid: a1d702f397092fe40ac77f0eccbf5558, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 7a244bddd3478184f80a00cf7fef8f5c, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1212724939
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3154,6 +3189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 1
   nombreDeProducto: cereales
+  parpados: {fileID: 0}
 --- !u!65 &1212724941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3321,6 +3357,10 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 4bdf0762544643143ba19980ac7ec32b, type: 3}
   SonidoDejar: {fileID: 8300000, guid: ceb0c1fa999d7ad40bffb810f0f784fb, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 9958fb187c2b1d14f9398153c42de179, type: 3}
+  ElSonido: {fileID: 8300000, guid: 0d87cd7ad0e1a8948af2b826b5148af7, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1276719605
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3431,6 +3471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 1
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &1276719607
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3776,6 +3817,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1642389415
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3886,6 +3928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: golosinas
+  parpados: {fileID: 0}
 --- !u!65 &1642389417
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4066,6 +4109,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1702250041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4176,6 +4220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1702250043
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4307,6 +4352,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1708049518
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4417,6 +4463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1708049520
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4548,6 +4595,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1805106083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4658,6 +4706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &1805106085
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4789,6 +4838,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1946799253
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4899,6 +4949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: golosinas
+  parpados: {fileID: 0}
 --- !u!65 &1946799255
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5030,6 +5081,10 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 4bdf0762544643143ba19980ac7ec32b, type: 3}
   SonidoDejar: {fileID: 8300000, guid: ceb0c1fa999d7ad40bffb810f0f784fb, type: 3}
   SonidoMeter: {fileID: 8300000, guid: 9958fb187c2b1d14f9398153c42de179, type: 3}
+  ElSonido: {fileID: 8300000, guid: 20deb14b42ea35f4bb193a11b1826647, type: 3}
+  SonidoDejar: {fileID: 0}
+  SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1965511070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5140,6 +5195,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: galletitas
+  parpados: {fileID: 0}
 --- !u!65 &1965511072
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5271,6 +5327,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &2061033140
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5381,6 +5438,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &2061033142
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5484,6 +5542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2092618056}
   - component: {fileID: 2092618055}
+  - component: {fileID: 2092618057}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5601,6 +5660,102 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f506a8dae61bf4cbe0a75470cc3827, type: 3}
+--- !u!82 &2092618057
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092618054}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 7248d8c3091760e408fe3ca34677c863, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.3
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2138516956
 GameObject:
   m_ObjectHideFlags: 0
@@ -5639,6 +5794,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &2138516958
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5749,6 +5905,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   esSaludable: 0
   nombreDeProducto: bebida
+  parpados: {fileID: 0}
 --- !u!65 &2138516960
 BoxCollider:
   m_ObjectHideFlags: 0

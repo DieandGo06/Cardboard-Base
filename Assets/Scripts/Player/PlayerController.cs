@@ -22,11 +22,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject productoSeleccionable;
     public GameObject productoSeleccionado;
     public bool usaJoystick;
+    public bool sePuedeMover;
 
     //Variables privadas
     Rigidbody rb;
     LayerMask layerToRaycast;
     [HideInInspector] public CarritoManager carrito;
+
+
+    //Variables para resbalar carrito
+    Vector2 lastInputs;
+    float tiempoTranscurrido;
+    float cooldownToTakeLastInputs;
 
 
 
@@ -43,11 +50,11 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-
+        sePuedeMover = true;
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
-        //if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
+        if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
         else usaJoystick = false;
 #endif
 
@@ -75,7 +82,10 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Caminar();
+        if (sePuedeMover)
+        {
+            Caminar();
+        }
     }
 
 
@@ -113,6 +123,15 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
             rb.MovePosition(transform.position + move * Time.deltaTime);
+        }
+    }
+
+    void CarritoResbaloso()
+    {
+        Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (inputs == Vector2.zero)
+        {
+            //if (tiempoTranscurrido < )
         }
     }
 

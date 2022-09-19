@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public float contadorCarne;
     public float contadorGolosinas;
 
+    //------------------------------------------------SONIDO
+    //public AudioSource audio;
+
     private void Awake()
     {
         instance = this;

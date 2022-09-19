@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Lista.unity
     guid: b3c3cae4e3d9ee44ca0ad1ec8188ecdb
   - enabled: 1
-    path: Assets/Scenes/Pruebas de Rendimiento/Prueba.unity
-    guid: 3c3b2003791a0f94cb60675930e4d96f
+    path: Assets/Scenes/PruebaInteracciones.unity
+    guid: 76313512954393b438186f5d835f28b8
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ef70db396aaae3740a77b6703c712dff, type: 2}
