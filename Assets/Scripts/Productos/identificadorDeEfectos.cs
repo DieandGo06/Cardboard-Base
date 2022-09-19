@@ -35,6 +35,9 @@ public class identificadorDeEfectos : MonoBehaviour
     bool estaBlinkeando;
     int direccion;
 
+    //Arritmias
+    ActivaSonido arritmia;
+
 
 
     void Start()
@@ -82,6 +85,13 @@ public class identificadorDeEfectos : MonoBehaviour
                     direccion = 1;
                     Tareas.Nueva(2.5f, () => direccion = -1);
                     Tareas.Nueva(5.2f, () => estaBlinkeando = false);
+
+
+                    if (!esSaludable)
+                    {
+                        Arritmias();
+                    }
+                    
                 }
 
 
@@ -241,6 +251,8 @@ public class identificadorDeEfectos : MonoBehaviour
 
     void Arritmias()
     {
+        GetComponent<AudioSource>().PlayOneShot(GetComponent<ActivaSonido>().Arritmia);
+
     }
 
 }

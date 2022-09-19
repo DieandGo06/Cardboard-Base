@@ -8,6 +8,9 @@ public class ActivaSonido : MonoBehaviour
     public AudioClip ElSonido;
     public AudioClip SonidoDejar;
     public AudioClip SonidoMeter;
+    public AudioClip Arritmia;
+
+
 
     // Start is called before the first frame update
     void Start()

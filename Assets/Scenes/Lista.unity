@@ -161,6 +161,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &4741182
 AudioSource:
   m_ObjectHideFlags: 0
@@ -400,9 +401,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9da336d7a3651594aae548dccce8fb4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
+  ElSonido: {fileID: 0}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 8300000, guid: 931a241eab258b04b9b95b446665f2ee, type: 3}
 --- !u!82 &118853428
 AudioSource:
   m_ObjectHideFlags: 0
@@ -415,7 +417,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1052,6 +1054,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: eab9e3f1bf36286409182c0e23f69f8b, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &474388987
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1294,6 +1297,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &526954186
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1800,6 +1804,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &768111300
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2042,6 +2047,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &795185055
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2379,6 +2385,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &934497288
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2487,7 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esSaludable: 0
+  esSaludable: 1
   nombreDeProducto: carne
   parpados: {fileID: 0}
 --- !u!65 &934497290
@@ -2621,6 +2628,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &964161899
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2874,6 +2882,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 1ad26db0af44eb5428aa053df94f4c20, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1212724939
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3116,6 +3125,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 0d87cd7ad0e1a8948af2b826b5148af7, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1276719605
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3536,6 +3546,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1642389415
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3827,6 +3838,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1702250041
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4069,6 +4081,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1708049518
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4311,6 +4324,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1805106083
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4553,6 +4567,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1946799253
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4795,6 +4810,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 20deb14b42ea35f4bb193a11b1826647, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &1965511070
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5037,6 +5053,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &2061033140
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5430,6 +5447,7 @@ MonoBehaviour:
   ElSonido: {fileID: 8300000, guid: 198cc125a16b7374d9e924827c3a92ca, type: 3}
   SonidoDejar: {fileID: 0}
   SonidoMeter: {fileID: 0}
+  Arritmia: {fileID: 0}
 --- !u!82 &2138516958
 AudioSource:
   m_ObjectHideFlags: 0
