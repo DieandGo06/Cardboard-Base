@@ -1568,6 +1568,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cam: {fileID: 2352517868169550773}
   googleTracked: {fileID: 2722319881459185893}
+  hijosContainer: {fileID: 5218970385843213385}
   distanciaObjetoAgarrado: 1.5
   distanciaAgarrarProducto: 8
   speed: 5
@@ -1575,7 +1576,7 @@ MonoBehaviour:
   productoSeleccionable: {fileID: 0}
   productoSeleccionado: {fileID: 0}
   usaJoystick: 1
-  sePuedeMover: 0
+  sePuedeMover: 1
   camaraMejoradaEditor: 1
   carrito: {fileID: 0}
 --- !u!1 &2352517868169550773
