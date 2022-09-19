@@ -17,8 +17,18 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: GONDOLAS
+    second: {fileID: 2100000, guid: 9a4ca729c6d830b4bbf4f13120cf5f9b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: GONDOLAS.-BEIGE
     second: {fileID: 2100000, guid: b55e71e92ae6b03458e90047f7fa2b35, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GondolaMadera
+    second: {fileID: 2100000, guid: 3782ab2bace6fe3459d54e76125885ce, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
