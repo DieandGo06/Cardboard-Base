@@ -26,7 +26,7 @@ public class identificadorDeEfectos : MonoBehaviour
     bool desactivarEfecto;
 
 
-    //Para el pestañeo
+    //Para el pestaï¿½eo
     public GameObject parpados;
     float posYparpadoUp;
     float posYparpadoInf;
@@ -48,7 +48,7 @@ public class identificadorDeEfectos : MonoBehaviour
             posYparpadoUp = parpados.transform.GetChild(0).transform.localPosition.y;
             posYparpadoInf = parpados.transform.GetChild(1).transform.localPosition.y;
         }
-        
+
 
 
     }
@@ -56,7 +56,7 @@ public class identificadorDeEfectos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
 
         //Debug.Log("contGalles" + gm.contadorGalletitas);
         //Debug.Log("contFruta" + gm.contadorBebida);
@@ -76,7 +76,7 @@ public class identificadorDeEfectos : MonoBehaviour
 
                 if (nombreDeProducto == "carne")
                 {
-                    
+
                     gm.contadorCarne--;
                     estaBlinkeando = true;
                     direccion = 1;

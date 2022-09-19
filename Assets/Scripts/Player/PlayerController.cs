@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
-        //if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
+        if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
         else usaJoystick = false;
 #endif
 
@@ -87,10 +87,7 @@ public class PlayerController : MonoBehaviour
             AgarrarProducto(other.gameObject);
         }
 
-        if (other.GetComponent<AudioSource>() != null)
-        {
-            other.GetComponent<AudioSource>().PlayOneShot(other.GetComponent<ActivaSonido>().ElSonido);
-        }
+     
     }
 
 
@@ -135,6 +132,11 @@ public class PlayerController : MonoBehaviour
         producto.transform.localPosition = nuevaPosicion;
         producto.transform.tag = "ProductoAgarrado";
         productoSeleccionado = producto;
+
+        if (producto.GetComponent<AudioSource>() != null)
+        {
+            producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().ElSonido);
+        }
     }
 
     void ShootRaycastToGrabProducts()
@@ -167,10 +169,23 @@ public class PlayerController : MonoBehaviour
         if (productoSeleccionado.GetComponent<PosicionarProducto>())
         {
             PosicionarProducto producto = productoSeleccionado.GetComponent<PosicionarProducto>();
-            if (producto.OnCollisionCarrito) producto.DejarEnCarrito();
-            else producto.DejarEnGondola();
+            if (producto.OnCollisionCarrito)
+            {
+                producto.DejarEnCarrito();
+                producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoMeter);
+            }
+            else
+            {
+                producto.DejarEnGondola();
+                producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoDejar);
+            }
             productoSeleccionado = null;
+
+           
+                
+            
         }
+      
     }
     #endregion
 
