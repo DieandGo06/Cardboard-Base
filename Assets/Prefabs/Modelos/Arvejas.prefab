@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 6961108076894847826}
   - component: {fileID: 7502511819046658438}
   - component: {fileID: 1931342976668131078}
-  m_Layer: 0
+  - component: {fileID: 2025081589156499883}
+  - component: {fileID: 2711774043349488302}
+  m_Layer: 6
   m_Name: Arvejas
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +86,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2025081589156499883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810363358914421982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
+--- !u!65 &2711774043349488302
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6810363358914421982}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01732051, y: 0.02, z: 0.008500825}
+  m_Center: {x: 0.00000047695613, y: -2.0369109e-10, z: 0.0042504086}

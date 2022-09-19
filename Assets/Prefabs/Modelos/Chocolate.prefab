@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 7750422292406869198}
   - component: {fileID: 3421844689399521730}
   - component: {fileID: 9201868119463489237}
-  m_Layer: 0
+  - component: {fileID: 4330304211836711003}
+  - component: {fileID: 7139761253751088211}
+  m_Layer: 6
   m_Name: Chocolate
-  m_TagString: Untagged
+  m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,3 +86,31 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &4330304211836711003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3817411877610590855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0
+--- !u!65 &7139761253751088211
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3817411877610590855}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.019999998, y: 0.020000001, z: 0.001817083}
+  m_Center: {x: -0.00000011921115, y: -8.035961e-11, z: 0.0009085404}
