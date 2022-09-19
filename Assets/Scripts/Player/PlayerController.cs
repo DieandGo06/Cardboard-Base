@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [Header("Referencias")]
     public GameObject cam;
     public Transform googleTracked;
+    public Transform hijosContainer;
 
     [Header("Variables setteables")]
     [SerializeField] float distanciaObjetoAgarrado;
@@ -58,6 +59,11 @@ public class PlayerController : MonoBehaviour
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
         else usaJoystick = false;
 #endif
+
+        if (usaJoystick)
+        {
+            hijosContainer.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
+        }
     }
 
     private void Update()
