@@ -11,11 +11,9 @@ GameObject:
   - component: {fileID: 2119633428897565807}
   - component: {fileID: 1921663962941699692}
   - component: {fileID: 5411404462512573057}
-  - component: {fileID: 7600786228796116476}
-  - component: {fileID: 2046156451224443333}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: pan_2
-  m_TagString: Producto
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -86,31 +84,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7600786228796116476
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5149264832752399649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gondolaSpace: {fileID: 0}
-  carrito: {fileID: 0}
-  OnCollisionCarrito: 0
---- !u!65 &2046156451224443333
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5149264832752399649}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.023233349, y: 0.019999998, z: 0.010350233}
-  m_Center: {x: 1.04877114e-10, y: -0.00000023842745, z: 0.0051751155}
