@@ -3,7 +3,62 @@ guid: 4c3e2013bc5fe5b498085d37fb68bd67
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GRIS
+    second: {fileID: 2100000, guid: 69fa198c8d15c094b991d88b3ffe6bde, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.001
+    second: {fileID: 2100000, guid: 360c10c56909015429d51b5eee2dc501, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 7ada5c1759054a2449a39c2a1a732201, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: 1e3a054d6805041408de1507e29c83a6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: fb7474ed9fa3c8e419fac0ba2c1f1f67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 024d3ab79a7374143ba0745f919b784a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NEGRO
+    second: {fileID: 2100000, guid: b36903d80b1b99e49a76cdecd927380e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Vidrio
+    second: {fileID: 2100000, guid: d8175c51569954743bcdd4e464451683, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: hamburguesa
+    second: {fileID: 2800000, guid: fece800ecb1cef6438c6f8c699e70afe, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: medallones
+    second: {fileID: 2800000, guid: c45eb8a4fb81a8448b464d1f29857056, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: salchichas
+    second: {fileID: 2800000, guid: 323138021ce8c044bb2e5248f411792f, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
