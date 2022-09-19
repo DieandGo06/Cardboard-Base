@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public Caminante caminanteFrutas;
+    public Caminante caminanteGalletitas;
+    public Caminante caminanteCereales;
     //public GameObject suelo;
     //public GameObject paredes;
     public GameObject bebida;
@@ -38,5 +41,35 @@ public class GameManager : MonoBehaviour
         contadorCarne = 2;
         contadorGolosinas = 1;
 
+    }
+
+    private void Update()
+    {
+
+        if (jugador != null) {
+            if (contadorBebida == 0)
+            {
+                ActivarCaminante(caminanteFrutas);
+                
+            }
+
+            if (contadorGalletitas == 0)
+            {
+                ActivarCaminante(caminanteGalletitas);
+            
+            }
+
+            if (contadorCereales == 0)
+            {
+                ActivarCaminante(caminanteCereales);
+            }
+        }
+    
+
+    }
+
+    void ActivarCaminante(Caminante caminante) {
+        caminante.seMueve = true;
+        jugador.GetComponent<PlayerController>().desactivarEfectos = true;
     }
 }

@@ -6,7 +6,8 @@ using UnityEngine.Audio;
 public class ActivaSonido : MonoBehaviour
 {
     public AudioClip ElSonido;
-    public AudioClip SonidoLanzar;
+    public AudioClip SonidoDejar;
+    public AudioClip SonidoMeter;
 
     // Start is called before the first frame update
     void Start()
