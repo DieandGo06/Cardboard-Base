@@ -14,30 +14,54 @@ public class identificadorDeEfectos : MonoBehaviour
 
     //bool veMal = true;
 
-
+    //Para parpadear
+    float speed;
+    bool abierto;
+    int contador;
     bool seEjecutaUnaVez;
 
     //Para el caminante
-  
     public string nombreDeProducto;
     bool choca;
     bool desactivarEfecto;
+
+
+    //Para el pestañeo
+    public GameObject parpados;
+    float posYparpadoUp;
+    float posYparpadoInf;
+    float tiempoTranscurrido;
+    float blinkDuration;
+    bool estaBlinkeando;
+    int direccion;
+
 
 
     void Start()
     {
         gm = GameManager.instance;
         choca = false;
+
+
+        if (parpados != null)
+        {
+            posYparpadoUp = parpados.transform.GetChild(0).transform.localPosition.y;
+            posYparpadoInf = parpados.transform.GetChild(1).transform.localPosition.y;
+        }
+        
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("contGalles"+ gm.contadorGalletitas);
-        Debug.Log("contFruta" + gm.contadorBebida);
-        //Debug.Log("contCarne" + gm.contadorCarne);
+        
 
-        Debug.Log("contCereales" + gm.contadorCereales);
+        //Debug.Log("contGalles" + gm.contadorGalletitas);
+        //Debug.Log("contFruta" + gm.contadorBebida);
+        //Debug.Log("contCarne" + gm.contadorCarne);
+        //Debug.Log("contCereales" + gm.contadorCereales);
 
 
         if (!seEjecutaUnaVez)
@@ -52,8 +76,12 @@ public class identificadorDeEfectos : MonoBehaviour
 
                 if (nombreDeProducto == "carne")
                 {
+                    
                     gm.contadorCarne--;
-
+                    estaBlinkeando = true;
+                    direccion = 1;
+                    Tareas.Nueva(2.5f, () => direccion = -1);
+                    Tareas.Nueva(5.2f, () => estaBlinkeando = false);
                 }
 
 
@@ -66,7 +94,6 @@ public class identificadorDeEfectos : MonoBehaviour
                 if (nombreDeProducto == "galletitas")
                 {
                     gm.contadorGalletitas--;
-
                     ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
                 }
 
@@ -83,19 +110,23 @@ public class identificadorDeEfectos : MonoBehaviour
 
                 seEjecutaUnaVez = true;
                 //ActivarCaminante(gm.contadorBebida);
-               // ActivarCaminante(gm.contadorGalletitas);
-               //// ActivarCaminante(gm.contadorCereales);
-               // ActivarCaminante(gm.contadorCarne);
-               // ActivarCaminante(gm.contadorGolosinas);
+                // ActivarCaminante(gm.contadorGalletitas);
+                //// ActivarCaminante(gm.contadorCereales);
+                // ActivarCaminante(gm.contadorCarne);
+                // ActivarCaminante(gm.contadorGolosinas);
             }
         }
 
 
-        //if (nombreDeProducto == "vision")
-        //{
-        //    veMal = false;
-
-        //}
+        if (estaBlinkeando)
+        {
+            float speed = 150;
+            posYparpadoUp -= Time.deltaTime * direccion * speed;
+            posYparpadoInf += Time.deltaTime * direccion * speed;
+            Tareas.Nueva(0.5f, CarritoFuerteClose);
+            // Tareas.Nueva(0.9f, CarritoFuerteOpen);
+            Debug.Log("moviendo");
+        }
 
     }
 
@@ -175,16 +206,38 @@ public class identificadorDeEfectos : MonoBehaviour
 
 
     void Retorcijon()
-    { 
+    {
 
     }
 
-    void CarritoResbaloso() { 
-    }
-
-    void CarritoFuerte()
+    void CarritoResbaloso()
     {
     }
+
+    void CarritoFuerteClose()// cerrar ojos
+    {
+
+
+        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, posYparpadoUp, 0);
+        parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, posYparpadoInf, 0);
+
+
+
+
+
+    }
+    void CarritoFuerteOpen()// abrir ojos
+    {
+
+
+        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, 822, 0);
+        parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, -822, 0);
+
+
+    }
+
+
+
 
     void Arritmias()
     {
