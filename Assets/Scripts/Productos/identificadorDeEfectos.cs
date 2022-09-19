@@ -220,9 +220,6 @@ public class identificadorDeEfectos : MonoBehaviour
 
     }
 
-    void CarritoResbaloso()
-    {
-    }
 
     void CarritoFuerteClose()// cerrar ojos
     {
