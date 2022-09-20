@@ -292,6 +292,11 @@ public class identificadorDeEfectos : MonoBehaviour
         gm.latidos.GetComponent<AudioSource>().volume = 1;
     }
 
+
+    void BuscarAudios()
+    {
+
+    }
    
 
 }

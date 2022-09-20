@@ -104,11 +104,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+#if UNITY_EDITOR
         if (other.transform.tag == "Producto")
         {
             if (productoSeleccionado == null) AgarrarProducto(other.gameObject);
-            Debug.Log("Se aplica");
         }
+#endif
     }
 
 

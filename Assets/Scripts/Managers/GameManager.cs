@@ -23,12 +23,6 @@ public class GameManager : MonoBehaviour
     public GameObject retorcijon;
     public GameObject jugador;
 
-
-    //public PlayerInfo playerInfo;
-
-    //public RawImage corteDeLuz;
-    //public GameObject globalVolume;
-
     private int limiteDeFps = 30;
     public float contadorFrutas;
     public float contadorVerduras;
@@ -38,7 +32,7 @@ public class GameManager : MonoBehaviour
     public float contadorGolosinas;
 
     //------------------------------------------------SONIDO
-    //public AudioSource audio;
+    public AudioClip[] audioCereal;
 
     private void Awake()
     {
