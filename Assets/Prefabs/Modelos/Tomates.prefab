@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4266544613949972179}
   - component: {fileID: 6706822883745297469}
   - component: {fileID: 601500440402562060}
+  - component: {fileID: 850048171964669326}
   m_Layer: 6
   m_Name: Tomates
   m_TagString: Producto
@@ -130,3 +131,19 @@ MonoBehaviour:
   esSaludable: 0
   nombreDeProducto: verdura
   parpados: {fileID: 0}
+--- !u!114 &850048171964669326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7881091124889572141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da336d7a3651594aae548dccce8fb4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ElSonido: {fileID: 8300000, guid: f086ff46343b6324c921489c9dc588a7, type: 3}
+  SonidoDejar: {fileID: 8300000, guid: 6a8979308e5c4314cb20b78f5f361036, type: 3}
+  SonidoMeter: {fileID: 8300000, guid: e004c596b51c1cf49b259ede353198ad, type: 3}
+  Arritmia: {fileID: 0}
