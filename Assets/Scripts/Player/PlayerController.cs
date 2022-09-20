@@ -336,13 +336,19 @@ public class PlayerController : MonoBehaviour
             if (producto.OnCollisionCarrito)
             {
                 producto.DejarEnCarrito();
-                producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoMeter);
+                if (producto.GetComponent<AudioSource>() != null || producto.GetComponent<ActivaSonido>() != null)
+                {
+                    producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoMeter);
+                }
                 productoSeleccionado.GetComponent<identificadorDeEfectos>().ReducirContadoryActivarEfectos();
             }
             else
             {
                 producto.DejarEnGondola();
-                producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoDejar);
+                if (producto.GetComponent<AudioSource>() != null || producto.GetComponent<ActivaSonido>() != null)
+                {
+                    producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoDejar);
+                }
             }
             productoSeleccionado = null;
 
