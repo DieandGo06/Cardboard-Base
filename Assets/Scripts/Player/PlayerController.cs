@@ -41,6 +41,8 @@ public class PlayerController : MonoBehaviour
     public bool sePuedeResbalar;
     bool seEstaResbalando;
 
+    public GameObject textoLimiteLista;
+
 
 
 
@@ -232,6 +234,61 @@ public class PlayerController : MonoBehaviour
 
     void AgarrarProducto(GameObject producto)
     {
+        if (GameManager.instance.contadorFrutas <= 0)
+        {
+            if (producto.GetComponent<identificadorDeEfectos>().nombreDeProducto == "frutas")
+            {
+                textoLimiteLista.SetActive(true);
+                Tareas.Nueva(2, () => textoLimiteLista.SetActive(false));
+                return;
+            }
+        }
+        if (GameManager.instance.contadorVerduras <= 0)
+        {
+            if (producto.GetComponent<identificadorDeEfectos>().nombreDeProducto == "verduras")
+            {
+                textoLimiteLista.SetActive(true);
+                Tareas.Nueva(2, () => textoLimiteLista.SetActive(false));
+                return;
+            }
+        }
+        if (GameManager.instance.contadorGalletitas <= 0)
+        {
+            if (producto.GetComponent<identificadorDeEfectos>().nombreDeProducto == "galletitas")
+            {
+                textoLimiteLista.SetActive(true);
+                Tareas.Nueva(2, () => textoLimiteLista.SetActive(false));
+                return;
+            }
+        }
+        if (GameManager.instance.contadorCereales <= 0)
+        {
+            if (producto.GetComponent<identificadorDeEfectos>().nombreDeProducto == "cereales")
+            {
+                textoLimiteLista.SetActive(true);
+                Tareas.Nueva(2, () => textoLimiteLista.SetActive(false));
+                return;
+            }
+        }
+        if (GameManager.instance.contadorCarne <= 0)
+        {
+            if (producto.GetComponent<identificadorDeEfectos>().nombreDeProducto == "carne")
+            {
+                textoLimiteLista.SetActive(true);
+                Tareas.Nueva(2, () => textoLimiteLista.SetActive(false));
+                return;
+            }
+        }
+        if (GameManager.instance.contadorGolosinas <= 0)
+        {
+            if (producto.GetComponent<identificadorDeEfectos>().nombreDeProducto == "golosinas")
+            {
+                textoLimiteLista.SetActive(true);
+                Tareas.Nueva(2, () => textoLimiteLista.SetActive(false));
+                return;
+            }
+        }
+
         SetAsChildOfCamera(producto);
         producto.transform.localPosition = Vector3.zero;
         Vector3 nuevaPosicion = Vector3.zero.CambiarZ(distanciaObjetoAgarrado);

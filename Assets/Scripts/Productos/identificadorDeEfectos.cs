@@ -63,7 +63,7 @@ public class identificadorDeEfectos : MonoBehaviour
         //Debug.Log("contGalles" + gm.contadorGalletitas);
         //Debug.Log("contFruta" + gm.contadorBebida);
         //Debug.Log("contCarne" + gm.contadorCarne);
-        Debug.Log("contCereales" + gm.contadorCereales);
+        //Debug.Log("contCereales" + gm.contadorCereales);
 
         //Debug.Log("esta true el blink" + estaBlinkeando);
 
