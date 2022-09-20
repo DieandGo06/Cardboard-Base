@@ -81,8 +81,18 @@ public class PlayerController : MonoBehaviour
             {
                 SoltarProducto();
             }
-
         }
+
+        Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        if (inputs != Vector2.zero)
+        {
+            if (tiempoTranscurrido % 0.5f == 0)
+            {
+                lastInputs = inputs;
+                Debug.Log(lastInputs);
+            }
+        }
+        tiempoTranscurrido += Time.deltaTime;
     }
 
 
@@ -102,8 +112,6 @@ public class PlayerController : MonoBehaviour
             productoSeleccionado = other.gameObject;
             AgarrarProducto(other.gameObject);
         }
-
-
     }
 
 
@@ -153,7 +161,7 @@ public class PlayerController : MonoBehaviour
 
     void CarritoResbaloso()
     {
-        /*
+        
         Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (inputs == Vector2.zero)
         {
@@ -171,7 +179,7 @@ public class PlayerController : MonoBehaviour
                 lastInputs = inputs;
             }
         }
-        */
+        
     }
 
 
