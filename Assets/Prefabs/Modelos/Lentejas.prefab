@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1380065121873725353}
   - component: {fileID: 9152891843587901106}
   - component: {fileID: 6560234357010110630}
+  - component: {fileID: 5712493423739462295}
   m_Layer: 6
   m_Name: Lentejas
   m_TagString: Producto
@@ -114,3 +115,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.017320506, y: 0.019999998, z: 0.008500826}
   m_Center: {x: -8.620273e-11, y: 0.0000004771986, z: 0.0042504123}
+--- !u!114 &5712493423739462295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043934558336233510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esSaludable: 0
+  nombreDeProducto: verdura
+  parpados: {fileID: 0}

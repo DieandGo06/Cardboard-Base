@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 877361355583041187}
   - component: {fileID: 2527075148799951486}
   - component: {fileID: 5083340680686614489}
+  - component: {fileID: 4033842697438758583}
   m_Layer: 6
   m_Name: galletitas_sanas
   m_TagString: Producto
@@ -114,3 +115,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.022000264, y: 0.021632936, z: 0.023420313}
   m_Center: {x: 0.0000946162, y: 0.00046655734, z: 0.010912548}
+--- !u!114 &4033842697438758583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1670272447737302902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esSaludable: 1
+  nombreDeProducto: galletitas
+  parpados: {fileID: 0}

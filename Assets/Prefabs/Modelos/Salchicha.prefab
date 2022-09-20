@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7168263106754053966}
   - component: {fileID: 5843386877390606638}
   - component: {fileID: 7615517891422859770}
+  - component: {fileID: 1140734757837285142}
   m_Layer: 6
   m_Name: Salchicha
   m_TagString: Producto
@@ -113,3 +114,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0016339754, y: 0.0021376484, z: 0.00095926976}
   m_Center: {x: -0.00000011935481, y: -0.000000007450581, z: -4.365574e-11}
+--- !u!114 &1140734757837285142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3447564087234222939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esSaludable: 0
+  nombreDeProducto: carne
+  parpados: {fileID: 0}
