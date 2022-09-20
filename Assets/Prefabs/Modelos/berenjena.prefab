@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 5472166251172327813}
   - component: {fileID: 8358656185239501867}
   - component: {fileID: -9152881686776251174}
+  - component: {fileID: 1768715616605814039}
+  - component: {fileID: 7467702940794484902}
   m_Layer: 6
   m_Name: berenjena
   m_TagString: Producto
@@ -214,3 +216,31 @@ MonoBehaviour:
   SonidoDejar: {fileID: 8300000, guid: dbee9723d3403314c9cac468a5f5a70e, type: 3}
   SonidoMeter: {fileID: 8300000, guid: dbee9723d3403314c9cac468a5f5a70e, type: 3}
   Arritmia: {fileID: 0}
+--- !u!65 &1768715616605814039
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4797329203445368685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018772546, y: 0.018696973, z: 0.034059275}
+  m_Center: {x: -0.00000047460603, y: 0.001087265, z: 0.01613354}
+--- !u!114 &7467702940794484902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4797329203445368685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0033d2ce7f74f046b9b56737d637d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gondolaSpace: {fileID: 0}
+  carrito: {fileID: 0}
+  OnCollisionCarrito: 0

@@ -78,6 +78,7 @@ public class PosicionarProducto : MonoBehaviour
         espacioInicial.transform.rotation = transform.rotation;
         espacioInicial.transform.name = "GondolaSpace";
         espacioInicial.transform.tag = "GondolaSpace";
+        espacioInicial.GetComponent<MeshRenderer>().enabled = false;
         transform.parent = espacioInicial.transform;
         gondolaSpace = espacioInicial.transform;
 
