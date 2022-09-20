@@ -60,7 +60,7 @@ public class identificadorDeEfectos : MonoBehaviour
     void Update()
     {
 
-        Debug.Log("contVerdu" + gm.contadorVerduras);
+        Debug.Log("contGolo" + gm.contadorGolosinas);
         //Debug.Log("contGalles" + gm.contadorGalletitas);
         //Debug.Log("contFruta" + gm.contadorFrutas);
         //Debug.Log("contCarne" + gm.contadorCarne);
@@ -133,6 +133,10 @@ public class identificadorDeEfectos : MonoBehaviour
             if (nombreDeProducto == "golosinas")
             {
                 gm.contadorGolosinas--;
+
+                if (!esSaludable) {
+                    Retorcijon();
+                }
             }
 
 
@@ -249,7 +253,7 @@ public class identificadorDeEfectos : MonoBehaviour
 
     void Retorcijon()
     {
-
+        gm.retorcijon.GetComponent<AudioSource>().Play();
     }
 
     void ActivarPestaneo()
@@ -289,9 +293,6 @@ public class identificadorDeEfectos : MonoBehaviour
         gm.latidos.GetComponent<AudioSource>().volume = 1;
     }
 
-    void DisminuirVolumenLatidos()
-    {
-        gm.latidos.GetComponent<AudioSource>().volume = 0.2f;
-    }
+   
 
 }

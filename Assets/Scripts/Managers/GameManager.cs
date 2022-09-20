@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public GameObject bebida;
     public GameObject latidos;
     public GameObject arritmia;
+    public GameObject retorcijon;
     public GameObject jugador;
 
 

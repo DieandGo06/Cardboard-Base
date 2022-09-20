@@ -439,7 +439,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477944167979, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
@@ -984,7 +984,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 931a241eab258b04b9b95b446665f2ee, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1d2e94e273f0b9c46b500c8ceef4b4b9, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -1339,7 +1339,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7124787477602004586, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004586, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_LocalScale.x
@@ -2300,8 +2300,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7124787477602004597, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 281930cf176e7424e95f4a2aaa032f1f, type: 2}
     - target: {fileID: 7124787477944167979, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2401,7 +2405,7 @@ GameObject:
   - component: {fileID: 768111299}
   - component: {fileID: 768111306}
   m_Layer: 6
-  m_Name: bebida (1)
+  m_Name: fruta2
   m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2532,7 +2536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  nombreDeProducto: bebida
+  nombreDeProducto: fruta
   parpados: {fileID: 0}
 --- !u!65 &768111302
 BoxCollider:
@@ -4930,7 +4934,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477944167979, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
@@ -4942,11 +4946,6 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9269ade458fbcfc4aac4584a623edcaa, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
---- !u!1 &1463931080 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
-  m_PrefabInstance: {fileID: 1445649762}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1620731610
 GameObject:
   m_ObjectHideFlags: 0
@@ -4983,6 +4982,200 @@ RectTransform:
   m_AnchoredPosition: {x: -0.104, y: 0.114}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1622268889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1622268894}
+  - component: {fileID: 1622268893}
+  - component: {fileID: 1622268892}
+  - component: {fileID: 1622268891}
+  - component: {fileID: 1622268890}
+  m_Layer: 0
+  m_Name: SonidoRetorcijon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1622268890
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622268889}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5625f8278031ef7419cccce6056ddce0, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!65 &1622268891
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622268889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1622268892
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622268889}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1622268893
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622268889}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1622268894
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1622268889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9.94, y: 3.17, z: 6.51}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1642389413
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,7 +5543,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477944167979, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
@@ -5379,7 +5572,7 @@ GameObject:
   - component: {fileID: 1702250040}
   - component: {fileID: 1702250047}
   m_Layer: 6
-  m_Name: bebida (4)
+  m_Name: verdura3
   m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5510,7 +5703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  nombreDeProducto: bebida
+  nombreDeProducto: verdura
   parpados: {fileID: 0}
 --- !u!65 &1702250043
 BoxCollider:
@@ -5622,7 +5815,7 @@ GameObject:
   - component: {fileID: 1708049517}
   - component: {fileID: 1708049524}
   m_Layer: 6
-  m_Name: bebida (3)
+  m_Name: verdura2
   m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5753,7 +5946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  nombreDeProducto: bebida
+  nombreDeProducto: verdura
   parpados: {fileID: 0}
 --- !u!65 &1708049520
 BoxCollider:
@@ -5896,7 +6089,7 @@ GameObject:
   - component: {fileID: 1805106082}
   - component: {fileID: 1805106089}
   m_Layer: 6
-  m_Name: bebida (2)
+  m_Name: verdura
   m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6027,7 +6220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  nombreDeProducto: bebida
+  nombreDeProducto: verdura
   parpados: {fileID: 0}
 --- !u!65 &1805106085
 BoxCollider:
@@ -6183,7 +6376,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 026437864804fca4b9d23f9f729294f0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 02129949e410595419f181f04c7921d4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.2
   m_Pitch: 1
@@ -6494,7 +6687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esSaludable: 0
+  esSaludable: 1
   nombreDeProducto: golosinas
   parpados: {fileID: 0}
 --- !u!65 &1946799255
@@ -6663,7 +6856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477944167979, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
@@ -6971,7 +7164,7 @@ GameObject:
   - component: {fileID: 2061033139}
   - component: {fileID: 2061033146}
   m_Layer: 6
-  m_Name: bebida
+  m_Name: fruta
   m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7101,8 +7294,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  esSaludable: 0
-  nombreDeProducto: bebida
+  esSaludable: 1
+  nombreDeProducto: fruta
   parpados: {fileID: 0}
 --- !u!65 &2061033142
 BoxCollider:
@@ -7227,15 +7420,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9d1ffe08765c644ad1413c920b5d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caminanteFrutas: {fileID: 6031842435275474509}
-  caminanteGalletitas: {fileID: 8240467026456712179}
-  caminanteCereales: {fileID: 7968482710415695097}
-  tachaduraGalletitas: {fileID: 1463931080}
+  tachaduraGalletitas: {fileID: 7124787476697494294}
+  tachaduraCereal: {fileID: 7124787477095423437}
+  tachaduraFruta: {fileID: 7124787477963787868}
+  tachaduraVerdura: {fileID: 7124787477281748601}
+  tachaduraCarne: {fileID: 7124787477561977355}
+  tachaduraGolosina: {fileID: 7124787477051119219}
   bebida: {fileID: 0}
   latidos: {fileID: 1862646491}
   arritmia: {fileID: 291373678}
+  retorcijon: {fileID: 1622268889}
   jugador: {fileID: 540419767}
-  contadorBebida: 0
+  contadorFrutas: 0
+  contadorVerduras: 0
   contadorGalletitas: 0
   contadorCereales: 0
   contadorCarne: 0
@@ -7265,7 +7462,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f401533ec79fb9940bde49215c9e9df6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3b02da3bcd470424baa7338cb060ca84, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.713
   m_Pitch: 1
@@ -7468,7 +7665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7124787477944167979, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
       propertyPath: m_IsActive
@@ -7497,7 +7694,7 @@ GameObject:
   - component: {fileID: 2138516957}
   - component: {fileID: 2138516964}
   m_Layer: 6
-  m_Name: bebida (5)
+  m_Name: verdura4
   m_TagString: Producto
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7628,7 +7825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   esSaludable: 0
-  nombreDeProducto: bebida
+  nombreDeProducto: verdura
   parpados: {fileID: 0}
 --- !u!65 &2138516960
 BoxCollider:
@@ -9057,6 +9254,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 585662836340125342}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &7124787476697494294 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+  m_PrefabInstance: {fileID: 1445649762}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7124787477051119219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+  m_PrefabInstance: {fileID: 1666643975}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7124787477095423437 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+  m_PrefabInstance: {fileID: 2129851321}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7124787477281748601 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+  m_PrefabInstance: {fileID: 1964627981}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7124787477561977355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+  m_PrefabInstance: {fileID: 44418175}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7124787477963787868 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7124787477602004596, guid: bbf359557bc2f3d45a35ad379a6f6311, type: 3}
+  m_PrefabInstance: {fileID: 716218408}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7238778222380885800
 GameObject:
   m_ObjectHideFlags: 0
