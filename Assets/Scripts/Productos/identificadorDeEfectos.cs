@@ -59,32 +59,32 @@ public class identificadorDeEfectos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
 
         Debug.Log("contGalles" + gm.contadorGalletitas);
         //Debug.Log("contFruta" + gm.contadorBebida);
         //Debug.Log("contCarne" + gm.contadorCarne);
         //Debug.Log("contCereales" + gm.contadorCereales);
 
+        Debug.Log("esta true el blink" + estaBlinkeando);
 
-
+       
 
         if (estaBlinkeando)
         {
-            float speed = 150;
+            float speed = 600;
             posYparpadoUp -= Time.deltaTime * direccion * speed;
             posYparpadoInf += Time.deltaTime * direccion * speed;
-            Tareas.Nueva(0.5f, CarritoFuerteClose);
-            // Tareas.Nueva(0.9f, CarritoFuerteOpen);
-            Debug.Log("moviendo");
+            Tareas.Nueva(0.2f, CarritoFuerteClose);
+
         }
-
-
 
     }
 
     public void ReducirContadoryActivarEfectos()
     {
+       
+
 
         if (!seEjecutaUnaVez)
         {
@@ -97,13 +97,14 @@ public class identificadorDeEfectos : MonoBehaviour
             if (nombreDeProducto == "carne")
                 gm.contadorCarne--;
             {
-                if (!esSaludable)
+                if (esSaludable)
                 {
-                   
-                    estaBlinkeando = true;
-                    direccion = 1;
-                    Tareas.Nueva(1.3f, () => direccion = -1);
-                    Tareas.Nueva(3.2f, () => estaBlinkeando = false);
+
+
+
+                    ActivarPestaneo();
+
+
 
                 }
                 if (!esSaludable && gm.contadorCarne <= 1)
@@ -242,6 +243,14 @@ public class identificadorDeEfectos : MonoBehaviour
 
     }
 
+    void ActivarPestaneo()
+    {
+        estaBlinkeando = true;
+        direccion = 1;
+        Tareas.Nueva(1.0f, () => direccion = -1);
+        Tareas.Nueva(2.0f, () => estaBlinkeando = false);
+
+    }
 
     void CarritoFuerteClose()// cerrar ojos
     {
@@ -250,10 +259,7 @@ public class identificadorDeEfectos : MonoBehaviour
         parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, posYparpadoUp, 0);
         parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, posYparpadoInf, 0);
 
-
-
-
-
+        
     }
     void CarritoFuerteOpen()// abrir ojos
     {
