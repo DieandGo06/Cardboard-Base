@@ -154,7 +154,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.TheLateLab.SandboxVRBaseV203
+    Android: com.UalterFack.MundoIdeal
     Standalone: com.Ualter-Fack.Mundo-Ideal
   buildNumber:
     Standalone: 0
