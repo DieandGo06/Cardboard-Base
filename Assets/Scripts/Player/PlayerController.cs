@@ -64,18 +64,17 @@ public class PlayerController : MonoBehaviour
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
         else usaJoystick = false;
 #endif
-
         if (usaJoystick)
         {
             hijosContainer.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
         }
 
-        //Tareas.Nueva(1, () => Debug.Log("hola"));
     }
 
     private void Update()
     {
         ShootRaycastToGrabProducts();
+        if (productoSeleccionable != null) Debug.Log(productoSeleccionable.transform.name);
 
         //!IMPORTANTE!: El gatillo con el control de VRBox en Android detecta el gatillo como LeftShift y usando Unity5 lo detecta como "JoystickButton4"
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.LeftShift))
@@ -89,6 +88,7 @@ public class PlayerController : MonoBehaviour
                 SoltarProducto();
             }
         }
+        rb.velocity = Vector3.zero;
     }
 
 
