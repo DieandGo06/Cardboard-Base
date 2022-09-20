@@ -106,8 +106,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.transform.tag == "Producto")
         {
-            productoSeleccionado = other.gameObject;
-            AgarrarProducto(other.gameObject);
+            if (productoSeleccionado == null) AgarrarProducto(other.gameObject);
+            Debug.Log("Se aplica");
         }
     }
 
