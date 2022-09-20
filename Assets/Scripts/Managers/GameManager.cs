@@ -7,11 +7,16 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Caminante caminanteFrutas;
-    public Caminante caminanteGalletitas;
-    public Caminante caminanteCereales;
+    //public Caminante caminanteFrutas;
+    //public Caminante caminanteGalletitas;
+    //public Caminante caminanteCereales;
     public GameObject tachaduraGalletitas;
- 
+    public GameObject tachaduraCereal;
+    public GameObject tachaduraFruta;
+    public GameObject tachaduraVerdura;
+    public GameObject tachaduraCarne;
+    public GameObject tachaduraGolosina;
+
     public GameObject bebida;
     public GameObject latidos;
     public GameObject arritmia;
@@ -24,7 +29,8 @@ public class GameManager : MonoBehaviour
     //public GameObject globalVolume;
 
     private int limiteDeFps = 30;
-    public float contadorBebida;
+    public float contadorFrutas;
+    public float contadorVerduras;
     public float contadorGalletitas;
     public float contadorCereales;
     public float contadorCarne;
@@ -41,7 +47,8 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Application.targetFrameRate = limiteDeFps;
-        contadorBebida = 2;
+        contadorFrutas = 1;
+        contadorVerduras = 2;
         contadorGalletitas = 2;
         contadorCereales = 2;
         contadorCarne = 2;
@@ -52,32 +59,66 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
 
-        if (jugador != null) {
-            if (contadorBebida == 0)
-            {
-                ActivarCaminante(caminanteFrutas);
+        if (jugador != null)
+        {
 
-                
-            }
 
             if (contadorGalletitas == 0)
             {
-                ActivarCaminante(caminanteGalletitas);
-                tachaduraGalletitas.SetActive(true);
-            
+
+              
+                ActivarCaminante(tachaduraGalletitas);
+
             }
 
             if (contadorCereales == 0)
             {
-                ActivarCaminante(caminanteCereales);
+              
+                ActivarCaminante(tachaduraCereal);
+            }
+
+            if (contadorFrutas == 0)
+            {             
+                ActivarCaminante(tachaduraFruta);
+            }
+
+            if (contadorVerduras == 0)
+            {
+                ActivarCaminante(tachaduraVerdura);
+            }
+
+            if (contadorCarne == 0)
+            {
+
+   
+                ActivarCaminante(tachaduraCarne);
+
+            }
+
+            if (contadorGolosinas == 0)
+            {
+                ActivarCaminante(tachaduraGolosina);
+               
+
             }
         }
-    
+
 
     }
 
-    void ActivarCaminante(Caminante caminante) {
-        caminante.seMueve = true;
+    //void ActivarCaminante(Caminante caminante)
+    //{
+    //    caminante.seMueve = true;
+    //    jugador.GetComponent<PlayerController>().desactivarEfectos = true;
+    //}
+
+    void ActivarCaminante(GameObject tachadura)
+    {
+        tachadura.SetActive(true);
         jugador.GetComponent<PlayerController>().desactivarEfectos = true;
     }
+
+
+
+
 }

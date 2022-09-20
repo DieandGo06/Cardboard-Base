@@ -31,7 +31,7 @@ public class EfectosDeProductos : MonoBehaviour
     void Update()
     {
         Debug.Log("contGalles" + gm.contadorGalletitas);
-        Debug.Log("contFruta" + gm.contadorBebida);
+        Debug.Log("contFruta" + gm.contadorFrutas);
         Debug.Log("contCarne" + gm.contadorCarne);
 
         // Debug.Log("contCereales" + gm.contadorCereales);
@@ -44,7 +44,7 @@ public class EfectosDeProductos : MonoBehaviour
             {
                 if (nombreDeProducto == "bebida")
                 {
-                    gm.contadorBebida--;
+                    gm.contadorFrutas--;
                 }
 
                 if (nombreDeProducto == "carne")
@@ -78,7 +78,7 @@ public class EfectosDeProductos : MonoBehaviour
                 //}
 
                 seEjecutaUnaVez = true;
-                ActivarCaminante(gm.contadorBebida);
+                ActivarCaminante(gm.contadorFrutas);
                 ActivarCaminante(gm.contadorGalletitas);
                 // ActivarCaminante(gm.contadorCereales);
                 ActivarCaminante(gm.contadorCarne);

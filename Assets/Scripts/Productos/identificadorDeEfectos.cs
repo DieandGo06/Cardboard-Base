@@ -59,10 +59,10 @@ public class identificadorDeEfectos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
 
-        Debug.Log("contGalles" + gm.contadorGalletitas);
-        //Debug.Log("contFruta" + gm.contadorBebida);
+        Debug.Log("contVerdu" + gm.contadorVerduras);
+        //Debug.Log("contGalles" + gm.contadorGalletitas);
+        //Debug.Log("contFruta" + gm.contadorFrutas);
         //Debug.Log("contCarne" + gm.contadorCarne);
         //Debug.Log("contCereales" + gm.contadorCereales);
 
@@ -89,24 +89,33 @@ public class identificadorDeEfectos : MonoBehaviour
         if (!seEjecutaUnaVez)
         {
 
-            if (nombreDeProducto == "bebida")
+            if (nombreDeProducto == "frutas")
             {
-                gm.contadorBebida--;
+                gm.contadorFrutas--;
+            }
+
+            if (nombreDeProducto == "verdura")
+            {
+                gm.contadorVerduras--;
             }
 
             if (nombreDeProducto == "carne")
                 gm.contadorCarne--;
             {
-                if (esSaludable)
+                if (esSaludable && gm.contadorCarne <= 1)
                 {
-
-
-
                     ActivarPestaneo();
-
-
+                    gm.latidos.GetComponent<AudioSource>().volume = 0.2f;
 
                 }
+
+                if (esSaludable && gm.contadorCarne <= 0)
+                {
+                    ActivarPestaneo();
+                    gm.latidos.GetComponent<AudioSource>().volume = 0;
+
+                }
+
                 if (!esSaludable && gm.contadorCarne <= 1)
                 {
                     AumentarVolumenLatidos();
@@ -149,7 +158,7 @@ public class identificadorDeEfectos : MonoBehaviour
             }
 
             seEjecutaUnaVez = true;
-            //ActivarCaminante(gm.contadorBebida);
+            //ActivarCaminante(gm.contadorFrutas);
             // ActivarCaminante(gm.contadorGalletitas);
             //// ActivarCaminante(gm.contadorCereales);
             // ActivarCaminante(gm.contadorCarne);
@@ -278,6 +287,11 @@ public class identificadorDeEfectos : MonoBehaviour
     void AumentarVolumenLatidos()
     {
         gm.latidos.GetComponent<AudioSource>().volume = 1;
+    }
+
+    void DisminuirVolumenLatidos()
+    {
+        gm.latidos.GetComponent<AudioSource>().volume = 0.2f;
     }
 
 }
