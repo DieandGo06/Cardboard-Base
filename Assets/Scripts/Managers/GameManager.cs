@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
     public Caminante caminanteFrutas;
     public Caminante caminanteGalletitas;
     public Caminante caminanteCereales;
-    //public GameObject suelo;
-    //public GameObject paredes;
+    public GameObject tachaduraGalletitas;
+ 
     public GameObject bebida;
     public GameObject latidos;
     public GameObject arritmia;
     public GameObject jugador;
+
+
     //public PlayerInfo playerInfo;
 
     //public RawImage corteDeLuz;
@@ -54,12 +56,14 @@ public class GameManager : MonoBehaviour
             if (contadorBebida == 0)
             {
                 ActivarCaminante(caminanteFrutas);
+
                 
             }
 
             if (contadorGalletitas == 0)
             {
                 ActivarCaminante(caminanteGalletitas);
+                tachaduraGalletitas.SetActive(true);
             
             }
 
