@@ -77,14 +77,14 @@ public class identificadorDeEfectos : MonoBehaviour
                     gm.contadorBebida--;
                 }
 
-                if (nombreDeProducto == "carne")
+                if (nombreDeProducto == "carne" && esSaludable==true)
                 {
 
                     gm.contadorCarne--;
                     estaBlinkeando = true;
                     direccion = 1;
-                    Tareas.Nueva(2.5f, () => direccion = -1);
-                    Tareas.Nueva(5.2f, () => estaBlinkeando = false);
+                    Tareas.Nueva(1.3f, () => direccion = -1);
+                    Tareas.Nueva(3.2f, () => estaBlinkeando = false);
 
 
                     if (!esSaludable)
@@ -130,10 +130,10 @@ public class identificadorDeEfectos : MonoBehaviour
 
         if (estaBlinkeando)
         {
-            float speed = 150;
+            float speed = 400;
             posYparpadoUp -= Time.deltaTime * direccion * speed;
             posYparpadoInf += Time.deltaTime * direccion * speed;
-            Tareas.Nueva(0.5f, CarritoFuerteClose);
+            Tareas.Nueva(0.2f, CarritoFuerteClose);
             // Tareas.Nueva(0.9f, CarritoFuerteOpen);
             Debug.Log("moviendo");
         }
@@ -237,8 +237,8 @@ public class identificadorDeEfectos : MonoBehaviour
     {
 
 
-        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, 822, 0);
-        parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, -822, 0);
+        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0,820, 0);
+        parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, -820, 0);
 
 
     }
