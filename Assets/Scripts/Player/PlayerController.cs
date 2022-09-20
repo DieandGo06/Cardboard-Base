@@ -37,7 +37,9 @@ public class PlayerController : MonoBehaviour
     Vector2 lastInputs;
     float tiempoLimite;
     float tiempoTranscurrido;
-    public bool seResbala;
+    float tiempoMaximoResbalando;
+    public bool sePuedeResbalar;
+    bool seEstaResbalando;
 
 
 
@@ -65,6 +67,8 @@ public class PlayerController : MonoBehaviour
         {
             hijosContainer.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
         }
+
+        //Tareas.Nueva(1, () => Debug.Log("hola"));
     }
 
     private void Update()
@@ -149,26 +153,49 @@ public class PlayerController : MonoBehaviour
 
     void Caminar()
     {
-        float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
+        float hAxis = Input.GetAxis("Horizontal");
+        Vector2 inputs = new Vector2(hAxis, vAxis);
+        float cooldown = 0.2f;
+        float cooldownResbalando = 3f;
 
-
-        if (seResbala)
+        if (sePuedeResbalar)
         {
-            /*
-            if (inputs != Vector2.zero)
+            if (inputs != Vector2.zero && seEstaResbalando == false)
             {
-
+                if (tiempoTranscurrido > tiempoLimite)
+                {
+                    lastInputs = inputs;
+                    tiempoLimite = tiempoTranscurrido + cooldown;
+                    tiempoMaximoResbalando = tiempoTranscurrido + cooldownResbalando;
+                    //Debug.Log("ESTA TOMANDO LOS INPUTS");
+                }
             }
-            */
+
+            if (inputs == Vector2.zero)
+            {
+                if (seEstaResbalando == false)
+                {
+                    Vector3 moveForce = (cam.transform.right * inputs.x * speed) + (cam.transform.forward * inputs.y * speed);
+                    rb.AddForce(moveForce, ForceMode.Impulse);
+                    seEstaResbalando = true;
+                    //Debug.Log("Empujando");
+
+                    Tareas.Nueva(2, () =>
+                    {
+                        rb.velocity = Vector3.zero;
+                        seEstaResbalando = false;
+                        //Debug.Log("se detiene");
+                    });
+                }
+                tiempoTranscurrido += Time.deltaTime;
+            }
         }
-
-        Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
+        //Debug.Log("se esta resbalando " + seEstaResbalando);
+        Vector3 move = (cam.transform.right * inputs.x * speed) + (cam.transform.forward * inputs.y * speed);
         rb.MovePosition(transform.position + move * Time.deltaTime);
-
-
-
     }
+
 
     void CarritoResbaloso()
     {
@@ -192,7 +219,7 @@ public class PlayerController : MonoBehaviour
                 lastInputs = inputs;
             }
         }
-        
+
     }
 
 

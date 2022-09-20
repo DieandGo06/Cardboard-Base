@@ -566,6 +566,7 @@ MonoBehaviour:
   caminanteFrutas: {fileID: 0}
   caminanteGalletitas: {fileID: 0}
   caminanteCereales: {fileID: 0}
+  tachaduraGalletitas: {fileID: 0}
   bebida: {fileID: 0}
   latidos: {fileID: 0}
   arritmia: {fileID: 0}
@@ -1174,6 +1175,50 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417301481}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &477805714
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 477805716}
+  - component: {fileID: 477805715}
+  m_Layer: 0
+  m_Name: AdministradorTarea
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &477805715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477805714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 802c1a337bdb9164a8c6bbfd4de1c583, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &477805716
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477805714}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.059999, y: 1.37, z: -13.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517261228
 GameObject:
   m_ObjectHideFlags: 0
@@ -3863,6 +3908,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2352517867016233906, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: seResbala
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352517867016233906, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
+      propertyPath: sePuedeResbalar
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2722319881024299272, guid: cc6beb4de25fdb744932c135cfc17767, type: 3}
       propertyPath: m_Name
       value: Player (Container)
@@ -6721,7 +6774,7 @@ MonoBehaviour:
   sePuedeMover: 1
   camaraMejoradaEditor: 1
   carrito: {fileID: 0}
-  seResbala: 0
+  sePuedeResbalar: 0
 --- !u!1 &6827713811788517695
 GameObject:
   m_ObjectHideFlags: 0
