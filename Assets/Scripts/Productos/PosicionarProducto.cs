@@ -7,6 +7,7 @@ public class PosicionarProducto : MonoBehaviour
     public Transform gondolaSpace;
     public CarritoManager carrito;
     public bool OnCollisionCarrito;
+    Quaternion rotacionInicial;
 
 
     private void Start()
@@ -51,10 +52,11 @@ public class PosicionarProducto : MonoBehaviour
     {
         transform.tag = "Producto";
         transform.parent = gondolaSpace;
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = rotacionInicial;
 
         float posY = transform.parent.localScale.y;
         transform.localPosition = new Vector3(0, posY, 0);
+
         //float posY = (transform.localScale.y / 2) - (transform.parent.localScale.y / 2);
     }
 
@@ -62,7 +64,8 @@ public class PosicionarProducto : MonoBehaviour
     {
         transform.tag = "Comprado";
         transform.parent = carrito.GetEmptySpace().transform;
-        transform.rotation = Quaternion.Euler(Vector3.zero);
+        transform.rotation = rotacionInicial;
+        //transform.rotation = Quaternion.Euler(Vector3.zero);
 
         float posY = transform.parent.lossyScale.y;
         transform.localPosition = new Vector3(0, posY, 0);
