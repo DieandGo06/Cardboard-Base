@@ -6721,6 +6721,7 @@ MonoBehaviour:
   sePuedeMover: 1
   camaraMejoradaEditor: 1
   carrito: {fileID: 0}
+  seResbala: 0
 --- !u!1 &6827713811788517695
 GameObject:
   m_ObjectHideFlags: 0

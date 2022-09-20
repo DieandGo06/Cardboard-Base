@@ -35,8 +35,9 @@ public class PlayerController : MonoBehaviour
 
     //Variables para resbalar carrito
     Vector2 lastInputs;
+    float tiempoLimite;
     float tiempoTranscurrido;
-    float cooldownToTakeLastInputs;
+    public bool seResbala;
 
 
 
@@ -82,22 +83,12 @@ public class PlayerController : MonoBehaviour
                 SoltarProducto();
             }
         }
-
-        Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        if (inputs != Vector2.zero)
-        {
-            if (tiempoTranscurrido % 0.5f == 0)
-            {
-                lastInputs = inputs;
-                Debug.Log(lastInputs);
-            }
-        }
-        tiempoTranscurrido += Time.deltaTime;
     }
 
 
     void FixedUpdate()
     {
+        MoverCamara();
         if (sePuedeMover)
         {
             Caminar();
@@ -117,7 +108,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-    void Caminar()
+    void MoverCamara()
     {
         float hAxis = Input.GetAxis("Horizontal");
         float vAxis = Input.GetAxis("Vertical");
@@ -153,23 +144,45 @@ public class PlayerController : MonoBehaviour
                 //No te permite mover la camara horizontalmente
                 cam.transform.localRotation = Quaternion.Euler(rotacionX, 0, 0f);
             }
-
-            Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
-            rb.MovePosition(transform.position + move * Time.deltaTime);
         }
+    }
+
+    void Caminar()
+    {
+        float hAxis = Input.GetAxis("Horizontal");
+        float vAxis = Input.GetAxis("Vertical");
+
+
+        if (seResbala)
+        {
+            /*
+            if (inputs != Vector2.zero)
+            {
+
+            }
+            */
+        }
+
+        Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
+        rb.MovePosition(transform.position + move * Time.deltaTime);
+
+
+
     }
 
     void CarritoResbaloso()
     {
-        
+        float cooldown = 0.5f;
         Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-        if (inputs == Vector2.zero)
-        {
-            if (tiempoTranscurrido < 0.5f) 
-            {
 
+        if (inputs != Vector2.zero)
+        {
+            if (tiempoTranscurrido > tiempoLimite)
+            {
+                lastInputs = inputs;
+                tiempoLimite += tiempoTranscurrido + cooldown;
             }
-            tiempoTranscurrido += Time.deltaTime;
+            Debug.Log(lastInputs);
         }
 
         if (inputs != Vector2.zero)
