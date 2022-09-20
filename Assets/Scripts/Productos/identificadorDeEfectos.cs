@@ -61,17 +61,32 @@ public class identificadorDeEfectos : MonoBehaviour
     {
 
 
-        //Debug.Log("contGalles" + gm.contadorGalletitas);
+        Debug.Log("contGalles" + gm.contadorGalletitas);
         //Debug.Log("contFruta" + gm.contadorBebida);
         //Debug.Log("contCarne" + gm.contadorCarne);
         //Debug.Log("contCereales" + gm.contadorCereales);
 
 
+
+
+        if (estaBlinkeando)
+        {
+            float speed = 150;
+            posYparpadoUp -= Time.deltaTime * direccion * speed;
+            posYparpadoInf += Time.deltaTime * direccion * speed;
+            Tareas.Nueva(0.5f, CarritoFuerteClose);
+            // Tareas.Nueva(0.9f, CarritoFuerteOpen);
+            Debug.Log("moviendo");
+        }
+
+    }
+
+    public void ReducirContadoryActivarEfectos()
+    {
+
         if (!seEjecutaUnaVez)
         {
 
-            if (choca)
-            {
                 if (nombreDeProducto == "bebida")
                 {
                     gm.contadorBebida--;
@@ -91,7 +106,7 @@ public class identificadorDeEfectos : MonoBehaviour
                     {
                         Arritmias();
                     }
-                    
+
                 }
 
 

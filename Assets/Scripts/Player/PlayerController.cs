@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [Header("Referencias")]
     public GameObject cam;
     public Transform googleTracked;
+    public Transform hijosContainer;
 
     [Header("Variables setteables")]
     [SerializeField] float distanciaObjetoAgarrado;
@@ -23,11 +24,13 @@ public class PlayerController : MonoBehaviour
     public GameObject productoSeleccionado;
     public bool usaJoystick;
     public bool sePuedeMover;
+    public bool camaraMejoradaEditor;
 
     //Variables privadas
     Rigidbody rb;
     LayerMask layerToRaycast;
     [HideInInspector] public CarritoManager carrito;
+    float rotacionX;
 
 
     //Variables para resbalar carrito
@@ -46,18 +49,21 @@ public class PlayerController : MonoBehaviour
         carrito = GetComponentInChildren<CarritoManager>();
         GameManager.instance.jugador = transform.gameObject;
         layerToRaycast = LayerMask.GetMask("Producto");
+        sePuedeMover = true;
     }
 
     void Start()
     {
-        sePuedeMover = true;
 #if UNITY_EDITOR
         //Detecta cuando se esta usando el unity remote (SOLO CUANDO EJECUTAS EN UNITY)
         if (UnityEditor.EditorApplication.isRemoteConnected) usaJoystick = true;
-        if (cam.GetComponent<CameraMovement>() != null) cam.GetComponent<CameraMovement>().enabled = true;
         else usaJoystick = false;
 #endif
 
+        if (usaJoystick)
+        {
+            hijosContainer.rotation = Quaternion.Euler(new Vector3(0, -180, 0));
+        }
     }
 
     private void Update()
@@ -121,6 +127,25 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            float sensibilidad = 600;
+            float mouseX = Input.GetAxis("Mouse X") * sensibilidad * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * sensibilidad * Time.deltaTime;
+            rotacionX -= mouseY;
+
+            if (camaraMejoradaEditor)
+            {
+                //No te permite agarrar objetos a distancia
+                cam.transform.parent = transform;
+                rotacionX = Mathf.Clamp(rotacionX, -90f, 45);
+                cam.transform.localRotation = Quaternion.Euler(rotacionX, 0, 0f);
+                transform.Rotate(Vector3.up * mouseX);
+            }
+            else
+            {
+                //No te permite mover la camara horizontalmente
+                cam.transform.localRotation = Quaternion.Euler(rotacionX, 0, 0f);
+            }
+
             Vector3 move = (cam.transform.right * hAxis * speed) + (cam.transform.forward * vAxis * speed);
             rb.MovePosition(transform.position + move * Time.deltaTime);
         }
@@ -128,11 +153,25 @@ public class PlayerController : MonoBehaviour
 
     void CarritoResbaloso()
     {
+        /*
         Vector2 inputs = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         if (inputs == Vector2.zero)
         {
-            //if (tiempoTranscurrido < )
+            if (tiempoTranscurrido < 0.5f) 
+            {
+
+            }
+            tiempoTranscurrido += Time.deltaTime;
         }
+
+        if (inputs != Vector2.zero)
+        {
+            if (tiempoTranscurrido % 0.5f == 0)
+            {
+                lastInputs = inputs;
+            }
+        }
+        */
     }
 
 
@@ -192,6 +231,7 @@ public class PlayerController : MonoBehaviour
             {
                 producto.DejarEnCarrito();
                 producto.GetComponent<AudioSource>().PlayOneShot(producto.GetComponent<ActivaSonido>().SonidoMeter);
+                productoSeleccionado.GetComponent<identificadorDeEfectos>().ReducirContadoryActivarEfectos();
             }
             else
             {

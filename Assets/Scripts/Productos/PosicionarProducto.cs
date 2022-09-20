@@ -22,6 +22,10 @@ public class PosicionarProducto : MonoBehaviour
         {
             gondolaSpace = other.transform;
         }
+        if (other.CompareTag("Carrito"))
+        {
+            OnCollisionCarrito = true;
+        }
     }
 
     private void OnTriggerStay(Collider other)
