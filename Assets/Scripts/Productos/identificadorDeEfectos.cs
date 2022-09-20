@@ -11,7 +11,7 @@ public class identificadorDeEfectos : MonoBehaviour
     public bool esSaludable;
     GameManager gm;
 
-
+    
     //bool veMal = true;
 
     //Para parpadear
@@ -250,29 +250,24 @@ public class identificadorDeEfectos : MonoBehaviour
         Tareas.Nueva(1.0f, () => direccion = -1);
         Tareas.Nueva(2.0f, () => estaBlinkeando = false);
 
+        
+
     }
 
     void CarritoFuerteClose()// cerrar ojos
     {
-
 
         parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, posYparpadoUp, 0);
         parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, posYparpadoInf, 0);
 
         
     }
-    void CarritoFuerteOpen()// abrir ojos
+
+    void cambiarCarrito()
     {
-
-
-        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, 820, 0);
-        parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, -820, 0);
-
-
+        //GameManager.jugador.GetComponent<PlayerController>().carritoBase;
+        GameManager.instance.jugador.GetComponent<MeshRenderer>().enabled = true;
     }
-
-
-
 
     void Arritmias()
     {
