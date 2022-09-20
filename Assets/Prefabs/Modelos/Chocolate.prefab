@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9201868119463489237}
   - component: {fileID: 4330304211836711003}
   - component: {fileID: 7139761253751088211}
+  - component: {fileID: -3738007042494517116}
   m_Layer: 6
   m_Name: Chocolate
   m_TagString: Producto
@@ -114,3 +115,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.019999998, y: 0.020000001, z: 0.001817083}
   m_Center: {x: -0.00000011921115, y: -8.035961e-11, z: 0.0009085404}
+--- !u!114 &-3738007042494517116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3817411877610590855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esSaludable: 0
+  nombreDeProducto: golosinas
+  parpados: {fileID: 0}

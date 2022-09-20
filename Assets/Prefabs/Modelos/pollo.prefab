@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5711628787532329104}
   - component: {fileID: 4569555503206127552}
   - component: {fileID: 1943951831479140645}
+  - component: {fileID: 3316246538330569061}
   m_Layer: 6
   m_Name: pollo
   m_TagString: Producto
@@ -115,3 +116,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.05154757, y: 0.07280624, z: 0.018407812}
   m_Center: {x: 0.0059141447, y: 0.013340047, z: 0.00079607987}
+--- !u!114 &3316246538330569061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6071754373425123653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824902b7c5278df49a2ec23d8ba55244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  esSaludable: 1
+  nombreDeProducto: carne
+  parpados: {fileID: 0}
