@@ -45,7 +45,7 @@ public class identificadorDeEfectos : MonoBehaviour
         gm = GameManager.instance;
         choca = false;
 
-
+        if (gm.parpadeoObject != null) parpados = gm.parpadeoObject;
         if (parpados != null)
         {
             posYparpadoUp = parpados.transform.GetChild(0).transform.localPosition.y;
@@ -240,13 +240,21 @@ public class identificadorDeEfectos : MonoBehaviour
     //powerUp carrito ------------------------------------------
     void RalentizarCarrito()
     {
-        gm.jugador.GetComponent<PlayerController>().speed -= 2;
+        if (gm.contadorGalletitas == 1 || gm.contadorGalletitas == 1) {
+            gm.jugador.GetComponent<PlayerController>().speed -= 3;
+        }
+
+        if (gm.contadorGalletitas > 1 || gm.contadorGalletitas > 1)
+        {
+            gm.jugador.GetComponent<PlayerController>().speed -= 3;
+        }
+
 
     }
 
     void AcelerarCarrito()
     {
-        gm.jugador.GetComponent<PlayerController>().speed += 2;
+        gm.jugador.GetComponent<PlayerController>().speed += 1.25f;
     }
 
 
@@ -268,18 +276,42 @@ public class identificadorDeEfectos : MonoBehaviour
 
     void CarritoFuerteClose()// cerrar ojos
     {
+        if (gm.parpadeoObject != null)
+        {
+            gm.parpadeoObject.transform.GetChild(0).transform.localPosition = new Vector3(0, posYparpadoUp, 0);
+            gm.parpadeoObject.transform.GetChild(1).transform.localPosition = new Vector3(0, posYparpadoInf, 0);
+        }
 
-        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, posYparpadoUp, 0);
-        parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, posYparpadoInf, 0);
 
-        
     }
 
     void cambiarCarrito()
     {
-        //GameManager.jugador.GetComponent<PlayerController>().carritoBase;
-        GameManager.instance.jugador.GetComponent<MeshRenderer>().enabled = true;
+
+
+        if (esSaludable && gm.contadorCarne <= 1)
+        {
+            if(GameManager.instance.parpadeoObject != null)
+            {
+                GameManager.instance.padreCarritos.transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+                GameManager.instance.padreCarritos.transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
+            }
+        }
+        if (esSaludable && gm.contadorCarne <= 0)
+        {
+
+            if (GameManager.instance.parpadeoObject != null)
+            {
+                GameManager.instance.padreCarritos.transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
+                GameManager.instance.padreCarritos.transform.GetChild(2).GetComponent<MeshRenderer>().enabled = true;
+            }
+
+        }
+
+
+
     }
+ 
 
     void Arritmias()
     {

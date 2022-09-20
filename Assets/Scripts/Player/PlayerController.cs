@@ -6,6 +6,10 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject carritoBase;
+    public GameObject carritoMedio;
+    public GameObject carritoBueno;
+
     //Variables en editor
     [Header("Referencias")]
     public GameObject cam;

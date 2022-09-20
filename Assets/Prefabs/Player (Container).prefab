@@ -5575,7 +5575,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2352517867016233904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4, z: 0}
+  m_LocalPosition: {x: 7.82, y: 1.4, z: 2.03}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -5676,12 +5676,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cbd37e1a1333148b25fba417e9d7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carritoBase: {fileID: 0}
+  carritoMedio: {fileID: 0}
+  carritoBueno: {fileID: 0}
   cam: {fileID: 2352517868169550773}
   googleTracked: {fileID: 2722319881459185893}
   hijosContainer: {fileID: 5218970385843213385}
-  distanciaObjetoAgarrado: 1.5
+  distanciaObjetoAgarrado: 0.75
   distanciaAgarrarProducto: 5
-  speed: 5
+  speed: 3.5
   desactivarEfectos: 0
   productoSeleccionable: {fileID: 0}
   productoSeleccionado: {fileID: 0}

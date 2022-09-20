@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public GameObject tachaduraCarne;
     public GameObject tachaduraGolosina;
 
+    public GameObject padreCarritos;
+
     public GameObject bebida;
     public GameObject latidos;
     public GameObject arritmia;
@@ -30,6 +32,9 @@ public class GameManager : MonoBehaviour
     public float contadorCereales;
     public float contadorCarne;
     public float contadorGolosinas;
+
+    [Space(10)]
+    public GameObject parpadeoObject;
 
     //------------------------------------------------SONIDO
     public AudioClip[] audioCereal;
@@ -49,6 +54,11 @@ public class GameManager : MonoBehaviour
         contadorCarne = 2;
         contadorGolosinas = 1;
 
+        padreCarritos = jugador.GetComponentInChildren<IdentificarPadreCarritos>().gameObject;
+        if (FindObjectOfType<IdentificarParpadeos>().gameObject != null)
+        {
+            parpadeoObject = FindObjectOfType<IdentificarParpadeos>().gameObject;
+        }
     }
 
     private void Update()
