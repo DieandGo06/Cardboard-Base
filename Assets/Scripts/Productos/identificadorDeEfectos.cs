@@ -79,6 +79,8 @@ public class identificadorDeEfectos : MonoBehaviour
             Debug.Log("moviendo");
         }
 
+
+
     }
 
     public void ReducirContadoryActivarEfectos()
@@ -87,73 +89,78 @@ public class identificadorDeEfectos : MonoBehaviour
         if (!seEjecutaUnaVez)
         {
 
-                if (nombreDeProducto == "bebida")
-                {
-                    gm.contadorBebida--;
-                }
+            if (nombreDeProducto == "bebida")
+            {
+                gm.contadorBebida--;
+            }
 
-                if (nombreDeProducto == "carne" && esSaludable==true)
+            if (nombreDeProducto == "carne")
+                gm.contadorCarne--;
+            {
+                if (!esSaludable)
                 {
-
-                    gm.contadorCarne--;
+                   
                     estaBlinkeando = true;
                     direccion = 1;
                     Tareas.Nueva(1.3f, () => direccion = -1);
                     Tareas.Nueva(3.2f, () => estaBlinkeando = false);
 
-
-                    if (!esSaludable)
-                    {
-                        Arritmias();
-                    }
-
                 }
-
-
-                if (nombreDeProducto == "golosinas")
+                if (!esSaludable && gm.contadorCarne <= 1)
                 {
-                    gm.contadorGolosinas--;
+                    AumentarVolumenLatidos();
+                
                 }
 
-
-                if (nombreDeProducto == "galletitas")
+                if (!esSaludable && gm.contadorCarne <= 0)
                 {
-                    gm.contadorGalletitas--;
-                    ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
+                    Arritmias();
                 }
 
-                if (nombreDeProducto == "cereales")
-                {
-                    gm.contadorCereales--;
-                    ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
-                }
-
-                if (gm.contadorGalletitas != 0 && gm.contadorCereales != 0)
-                {
-                    gm.jugador.GetComponent<PlayerController>().desactivarEfectos = false;
-                }
-
-                seEjecutaUnaVez = true;
-                //ActivarCaminante(gm.contadorBebida);
-                // ActivarCaminante(gm.contadorGalletitas);
-                //// ActivarCaminante(gm.contadorCereales);
-                // ActivarCaminante(gm.contadorCarne);
-                // ActivarCaminante(gm.contadorGolosinas);
             }
+
+
+            if (nombreDeProducto == "golosinas")
+            {
+                gm.contadorGolosinas--;
+            }
+
+
+            if (nombreDeProducto == "galletitas")
+            {
+                gm.contadorGalletitas--;
+                ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
+            }
+
+            if (nombreDeProducto == "cereales")
+            {
+                gm.contadorCereales--;
+                ActivarEfectos(RalentizarCarrito, AcelerarCarrito);
+            }
+
+
+
+
+            if (gm.contadorGalletitas != 0 && gm.contadorCereales != 0)
+            {
+                gm.jugador.GetComponent<PlayerController>().desactivarEfectos = false;
+
+            }
+
+            seEjecutaUnaVez = true;
+            //ActivarCaminante(gm.contadorBebida);
+            // ActivarCaminante(gm.contadorGalletitas);
+            //// ActivarCaminante(gm.contadorCereales);
+            // ActivarCaminante(gm.contadorCarne);
+            // ActivarCaminante(gm.contadorGolosinas);
+
         }
-
-
-        if (estaBlinkeando)
-        {
-            float speed = 400;
-            posYparpadoUp -= Time.deltaTime * direccion * speed;
-            posYparpadoInf += Time.deltaTime * direccion * speed;
-            Tareas.Nueva(0.2f, CarritoFuerteClose);
-            // Tareas.Nueva(0.9f, CarritoFuerteOpen);
-            Debug.Log("moviendo");
-        }
-
     }
+
+
+
+
+
 
     //--------------- CODIGO DE ActivarCaminante------------------------------------
     private void OnTriggerEnter(Collider other)
@@ -252,7 +259,7 @@ public class identificadorDeEfectos : MonoBehaviour
     {
 
 
-        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0,820, 0);
+        parpados.transform.GetChild(0).transform.localPosition = new Vector3(0, 820, 0);
         parpados.transform.GetChild(1).transform.localPosition = new Vector3(0, -820, 0);
 
 
@@ -263,8 +270,13 @@ public class identificadorDeEfectos : MonoBehaviour
 
     void Arritmias()
     {
-        GetComponent<AudioSource>().PlayOneShot(GetComponent<ActivaSonido>().Arritmia);
+        gm.arritmia.GetComponent<AudioSource>().volume = 1;
 
+    }
+
+    void AumentarVolumenLatidos()
+    {
+        gm.latidos.GetComponent<AudioSource>().volume = 1;
     }
 
 }

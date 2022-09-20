@@ -103,7 +103,7 @@ public class PlayerController : MonoBehaviour
             AgarrarProducto(other.gameObject);
         }
 
-     
+
     }
 
 
@@ -212,7 +212,7 @@ public class PlayerController : MonoBehaviour
             else if (i == 4) origin = cam.transform.position + (Vector3.left * 0.1f);
             Physics.Raycast(origin, cam.transform.TransformDirection(Vector3.forward), out hits[i], distanciaAgarrarProducto, layerToRaycast);
             Debug.DrawRay(origin, cam.transform.TransformDirection(Vector3.forward) * hits[i].distance, Color.yellow);
-            
+
             if (hits[i].collider != null && hits[i].transform.CompareTag("Producto"))
             {
                 productoSeleccionable = hits[i].collider.transform.gameObject;
@@ -240,11 +240,8 @@ public class PlayerController : MonoBehaviour
             }
             productoSeleccionado = null;
 
-           
-                
-            
         }
-      
+
     }
     #endregion
 

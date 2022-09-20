@@ -13,7 +13,8 @@ public class GameManager : MonoBehaviour
     //public GameObject suelo;
     //public GameObject paredes;
     public GameObject bebida;
-
+    public GameObject latidos;
+    public GameObject arritmia;
     public GameObject jugador;
     //public PlayerInfo playerInfo;
 
