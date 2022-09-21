@@ -92,7 +92,7 @@ public class PlayerController : MonoBehaviour
                 SoltarProducto();
             }
         }
-        //rb.velocity = Vector3.zero;
+        rb.velocity = Vector3.zero;
     }
 
 

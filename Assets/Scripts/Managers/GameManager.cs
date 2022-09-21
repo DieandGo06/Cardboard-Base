@@ -2,10 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Rendering;
-//using UnityEngine.Rendering.Universal;
-using UnityEngine.Rendering.PostProcessing;
-
 //using UnityEngine.Rendering.Universal;
 
 public class GameManager : MonoBehaviour
@@ -23,7 +19,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject padreCarritos;
 
-    public GameObject volumen;
     public GameObject bebida;
     public GameObject latidos;
     public GameObject arritmia;
@@ -40,8 +35,6 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     public GameObject parpadeoObject;
-    public PostProcessVolume volume;
-    [HideInInspector] public ColorGrading colorGrading;
 
     //------------------------------------------------SONIDO
     public AudioClip[] audioCereal;
@@ -62,20 +55,6 @@ public class GameManager : MonoBehaviour
         contadorCereales = 2;
         contadorCarne = 2;
         contadorGolosinas = 1;
-
-        ColorGrading color;
-        if (volume.profile.TryGetSettings<ColorGrading>(out color))
-        {
-            colorGrading = color;
-        }
-
-        /*
-        //padreCarritos = jugador.GetComponentInChildren<IdentificarPadreCarritos>().gameObject;
-        if (FindObjectOfType<IdentificarParpadeos>().gameObject != null)
-        {
-            parpadeoObject = FindObjectOfType<IdentificarParpadeos>().gameObject;
-        }
-        */
     }
 
     private void Update()

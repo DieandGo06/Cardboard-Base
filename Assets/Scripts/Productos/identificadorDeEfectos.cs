@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.UI; //IMPORTANTE!!!!
-using UnityEngine.Rendering;
+//using UnityEngine.Rendering;
 //using UnityEngine.Rendering.Universal;
-using UnityEngine.Rendering.PostProcessing;
 
 public class identificadorDeEfectos : MonoBehaviour
 {
@@ -36,15 +35,13 @@ public class identificadorDeEfectos : MonoBehaviour
     bool estaBlinkeando;
     int direccion;
 
-    public float GallesyCereales;
-
     //Arritmias
     ActivaSonido arritmia;
 
 
+
     void Start()
     {
-
         gm = GameManager.instance;
         choca = false;
 
@@ -52,21 +49,14 @@ public class identificadorDeEfectos : MonoBehaviour
         posYparpadoUp = 750;
         posYparpadoInf = -750;
 
-        /*
-        if (gm.parpadeoObject != null) parpados = gm.parpadeoObject;
-        if (parpados != null)
-        {
-            posYparpadoUp = parpados.transform.GetChild(0).transform.localPosition.y;
-            posYparpadoInf = parpados.transform.GetChild(1).transform.localPosition.y;
-        }
-        */
+
     }
 
     // Update is called once per frame
     void Update()
     {
-          GallesyCereales = gm.contadorGalletitas + gm.contadorCereales;
-        //Debug.Log("contGallesyCereales" + GallesyCereales);
+
+        //Debug.Log("contGalles" + gm.contadorGalletitas);
         //Debug.Log("contFruta" + gm.contadorBebida);
         //Debug.Log("contCarne" + gm.contadorCarne);
         //Debug.Log("contCereales" + gm.contadorCereales);
@@ -89,7 +79,9 @@ public class identificadorDeEfectos : MonoBehaviour
 
     public void ReducirContadoryActivarEfectos()
     {
-    
+       
+
+
         if (!seEjecutaUnaVez)
         {
 
@@ -140,10 +132,6 @@ public class identificadorDeEfectos : MonoBehaviour
 
                 if (!esSaludable) {
                     Retorcijon();
-                }
-                else
-                {
-                    SaturarColores();
                 }
             }
 
@@ -249,13 +237,13 @@ public class identificadorDeEfectos : MonoBehaviour
     //powerUp carrito ------------------------------------------
     void RalentizarCarrito()
     {
-        if (GallesyCereales > 2 ) {
-            gm.jugador.GetComponent<PlayerController>().speed = gm.jugador.GetComponent<PlayerController>().speed - 1.5f;
+        if (gm.contadorGalletitas == 1 || gm.contadorGalletitas == 1) {
+            gm.jugador.GetComponent<PlayerController>().speed -= 3;
         }
 
-        if (GallesyCereales == 2 || GallesyCereales == 1)
+        if (gm.contadorGalletitas > 1 || gm.contadorGalletitas > 1)
         {
-            gm.jugador.GetComponent<PlayerController>().speed = gm.jugador.GetComponent<PlayerController>().speed - 0.5f;
+            gm.jugador.GetComponent<PlayerController>().speed -= 3;
         }
 
 
@@ -263,15 +251,7 @@ public class identificadorDeEfectos : MonoBehaviour
 
     void AcelerarCarrito()
     {
-        if (GallesyCereales > 2)
-        {
-            gm.jugador.GetComponent<PlayerController>().speed = gm.jugador.GetComponent<PlayerController>().speed + 1.5f;
-        }
-
-        if (GallesyCereales == 2 || GallesyCereales == 1)
-        {
-            gm.jugador.GetComponent<PlayerController>().speed = gm.jugador.GetComponent<PlayerController>().speed + 1f;
-        }
+        gm.jugador.GetComponent<PlayerController>().speed += 1.25f;
     }
 
 
@@ -339,11 +319,6 @@ public class identificadorDeEfectos : MonoBehaviour
     void AumentarVolumenLatidos()
     {
         gm.latidos.GetComponent<AudioSource>().volume = 1;
-    }
-
-    void SaturarColores()
-    {
-        gm.colorGrading.saturation.value = 0;
     }
 
 
