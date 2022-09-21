@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1394,6 +1394,7 @@ GameObject:
   - component: {fileID: 402712877}
   - component: {fileID: 402712876}
   - component: {fileID: 402712875}
+  - component: {fileID: 402712879}
   m_Layer: 5
   m_Name: Parpados
   m_TagString: Untagged
@@ -1484,6 +1485,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &402712879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402712874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b3684872eed20b41bba2ab1bca96366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &407610812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1987,6 +2000,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &485132191 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5126325062781698859, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
+  m_PrefabInstance: {fileID: 868682834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &544468511
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,18 +2107,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a9d1ffe08765c644ad1413c920b5d6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  caminanteFrutas: {fileID: 868682837}
-  caminanteGalletitas: {fileID: 868682836}
-  caminanteCereales: {fileID: 868682835}
+  tachaduraGalletitas: {fileID: 2071383742}
+  tachaduraCereal: {fileID: 1907757827}
+  tachaduraFruta: {fileID: 2071383742}
+  tachaduraVerdura: {fileID: 1768317754}
+  tachaduraCarne: {fileID: 485132191}
+  tachaduraGolosina: {fileID: 1907757827}
+  padreCarritos: {fileID: 0}
   bebida: {fileID: 0}
   latidos: {fileID: 0}
   arritmia: {fileID: 0}
+  retorcijon: {fileID: 0}
   jugador: {fileID: 0}
-  contadorBebida: 0
+  contadorFrutas: 0
+  contadorVerduras: 0
   contadorGalletitas: 0
   contadorCereales: 0
   contadorCarne: 0
   contadorGolosinas: 0
+  parpadeoObject: {fileID: 0}
+  audioCereal: []
 --- !u!4 &568815206
 Transform:
   m_ObjectHideFlags: 0
@@ -3147,39 +3173,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
---- !u!114 &868682835 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7968482709982692273, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 868682834}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &868682836 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8240467026891672763, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 868682834}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &868682837 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6031842435713194245, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
-  m_PrefabInstance: {fileID: 868682834}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc0dea1e1a346f34c9c7758cb7e12d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &894354806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4542,6 +4535,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1768317754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7238778223015737440, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
+  m_PrefabInstance: {fileID: 868682834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1901740659
 GameObject:
   m_ObjectHideFlags: 0
@@ -4785,6 +4783,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901740659}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1907757827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 748562761728050913, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
+  m_PrefabInstance: {fileID: 868682834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1930267654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5992,6 +5995,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2071383742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6031842435713194251, guid: bace9056b3ca72e4884ada6b58f0efe6, type: 3}
+  m_PrefabInstance: {fileID: 868682834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2107102268
 GameObject:
   m_ObjectHideFlags: 0
@@ -6104,6 +6112,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5cbd37e1a1333148b25fba417e9d7c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carritoBase: {fileID: 0}
+  carritoMedio: {fileID: 0}
+  carritoBueno: {fileID: 0}
   cam: {fileID: 712086054122667787}
   googleTracked: {fileID: 901735277723606107}
   hijosContainer: {fileID: 7001273455325425911}
@@ -6117,6 +6128,8 @@ MonoBehaviour:
   sePuedeMover: 1
   camaraMejoradaEditor: 1
   carrito: {fileID: 0}
+  sePuedeResbalar: 0
+  textoLimiteLista: {fileID: 0}
 --- !u!4 &712086052927424269
 Transform:
   m_ObjectHideFlags: 0

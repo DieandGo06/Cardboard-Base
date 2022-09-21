@@ -39,6 +39,8 @@ public class GameManager : MonoBehaviour
     //------------------------------------------------SONIDO
     public AudioClip[] audioCereal;
 
+
+
     private void Awake()
     {
         instance = this;
@@ -53,12 +55,6 @@ public class GameManager : MonoBehaviour
         contadorCereales = 2;
         contadorCarne = 2;
         contadorGolosinas = 1;
-
-        padreCarritos = jugador.GetComponentInChildren<IdentificarPadreCarritos>().gameObject;
-        if (FindObjectOfType<IdentificarParpadeos>().gameObject != null)
-        {
-            parpadeoObject = FindObjectOfType<IdentificarParpadeos>().gameObject;
-        }
     }
 
     private void Update()
@@ -66,14 +62,9 @@ public class GameManager : MonoBehaviour
 
         if (jugador != null)
         {
-
-
             if (contadorGalletitas == 0)
             {
-
-              
                 ActivarCaminante(tachaduraGalletitas);
-
             }
 
             if (contadorCereales == 0)

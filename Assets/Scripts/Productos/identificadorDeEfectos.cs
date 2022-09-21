@@ -45,13 +45,9 @@ public class identificadorDeEfectos : MonoBehaviour
         gm = GameManager.instance;
         choca = false;
 
-        if (gm.parpadeoObject != null) parpados = gm.parpadeoObject;
-        if (parpados != null)
-        {
-            posYparpadoUp = parpados.transform.GetChild(0).transform.localPosition.y;
-            posYparpadoInf = parpados.transform.GetChild(1).transform.localPosition.y;
-        }
-
+        //Valores Hardcodeados
+        posYparpadoUp = 750;
+        posYparpadoInf = -750;
 
 
     }
@@ -67,15 +63,16 @@ public class identificadorDeEfectos : MonoBehaviour
 
         //Debug.Log("esta true el blink" + estaBlinkeando);
 
-       
+
 
         if (estaBlinkeando)
         {
-            float speed = 600;
+            float speed = 800;
             posYparpadoUp -= Time.deltaTime * direccion * speed;
             posYparpadoInf += Time.deltaTime * direccion * speed;
+            gm.parpadeoObject.transform.GetChild(0).GetComponent<RectTransform>().position = new Vector3(0, posYparpadoUp,0);
+            gm.parpadeoObject.transform.GetChild(1).GetComponent<RectTransform>().position = new Vector3(0, posYparpadoInf, 0);
             Tareas.Nueva(0.2f, CarritoFuerteClose);
-
         }
 
     }
@@ -267,9 +264,9 @@ public class identificadorDeEfectos : MonoBehaviour
     {
         estaBlinkeando = true;
         direccion = 1;
-        Tareas.Nueva(1.0f, () => direccion = -1);
-        Tareas.Nueva(2.0f, () => estaBlinkeando = false);
-
+        Tareas.Nueva(0.65f, () => direccion = -1);
+        Tareas.Nueva(1.3f, () => estaBlinkeando = false);
+        Debug.Log("Activo");
         
 
     }
